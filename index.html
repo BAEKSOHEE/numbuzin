@@ -10,9 +10,16 @@
     <link rel="stylesheet" href="./css/base.css" title="text/css">
     <!-- pc해상도에 맞는 서식 -->
     <link href="./css/pc.css" rel="stylesheet" type="text/css">
+    <!-- tablet해상도에 맞는 서식 -->
+    <link href="./css/tablet.css" rel="stylesheet" type="text/css">
+    <!-- mobile해상도에 맞는 서식 -->
+    <link href="./css/mobile.css" rel="stylesheet" type="text/css">
     <!-- 폰트어썸 아이콘폰트 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <!-- xe아이콘폰트 -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- 제이쿼리 라이브러리 연결하기 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <!-- 파비콘 이미지 삽입하기 -->
     <link href="./images/DkY05v1i.ico" type="image/x-icon" rel="shortcut icon">
     <!-- 슬라이드 스크립트 -->
@@ -29,18 +36,47 @@
         <nav class="lnb">
             <a href="login.html" title="로그인">로그인</a></li>
             <a href="join.html" title="회원가입">회원가입</a></li>
-            <a href="#" title="검색" id="search"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#" title="검색" id="search"><i class="o_search fa-solid fa-magnifying-glass"></i></a>
         </nav>
         </div>
         <div class="search_modal">
-            <i class="fa-solid fa-xmark"></i>
-            <div class="sealch">
+            <i class="c_search fa-solid fa-xmark"></i>
+            <div class="search">
                 <div class="field">
-                    <input type="search">
-                    <input type="button" value="search">
+                    <input type="search" placeholder="검색어를 입력하세요.">
+
+                    <input type="button" value="검색">
                 </div>
+                <p class="hashtag">
+                    #모공개선 #탄력 #결케어 #보습 #주름개선 #홍조커버
+                </p>
             </div>
         </div>
+
+        <!-- 검색 모달창 스크립트 -->
+        <script>
+            $('.search .field input[type=search]').focus(function(){
+                $(this).parent().next().css('display', 'block')
+            }).blur(function(){
+                $(this).parent().next().css('display', 'none')
+            });
+            $('.o_search').click(function(){
+                $('.search_modal').addClass('active')
+            });
+            $('.c_search, section').click(function(){
+                $('.search_modal').removeClass('active')
+            });
+
+            // gnb 아코디언
+            $(document).ready(function(){
+                const menu = $('.gnb > ul > li > a');
+                menu.click(function(){
+                    $(this).next("ul").toggleClass("hide");
+            });
+
+            });
+
+        </script>
 
         <label for="toggle" class="t_btn">
             <i class="fas fa-bars"></i>
@@ -51,7 +87,7 @@
             <nav class="gnb">
                 <label for="toggle" class="c_btn"><i class="fa-solid fa-circle-xmark"></i></label>
                 <ul>
-                    <li><a href="skin.html" title="스킨케어">스킨케어 <i class="fas fa-angle-down"></i></a>
+                    <li><a href="#" title="스킨케어">스킨케어 <i class="fas fa-angle-down"></i></a>
                         <ul class="sub">
                             <li><a href="./toner.html" title="스킨/토너">스킨/토너</a></li>
                             <li><a href="#" title="로션/에멀젼">로션/에멀젼</a></li>
@@ -65,14 +101,14 @@
                         </ul>
                     </li>
                     
-                    <li><a href="sun.html" title="선케어">선케어 <i class="fas fa-angle-down"></i></a>
+                    <li><a href="#" title="선케어">선케어 <i class="fas fa-angle-down"></i></a>
                         <ul class="sub">
                             <li><a href="#" title="선크림">선크림</a></li>
                             <li><a href="#" title="선블록">선블록</a></li>
                         </ul>
                     </li>
                         
-                    <li><a href="pack.html" title="마스크팩">마스크팩 <i class="fas fa-angle-down"></i></a>
+                    <li><a href="#" title="마스크팩">마스크팩 <i class="fas fa-angle-down"></i></a>
                         <ul class="sub">
                             <li><a href="#" title="진정팩">진정팩</a></li>
                             <li><a href="#" title="미백팩">미백팩</a></li>
@@ -81,7 +117,7 @@
                         </ul>
                     </li>
                         
-                    <li><a href="cleansing.html" title="클렌징">클렌징 <i class="fas fa-angle-down"></i></a>
+                    <li><a href="#" title="클렌징">클렌징 <i class="fas fa-angle-down"></i></a>
                         <ul class="sub">
                             <li><a href="#" title="클렌징폼">클렌징폼</a></li>
                             <li><a href="#" title="클렌징오일">클렌징오일</a></li>
@@ -97,7 +133,7 @@
                 <li><a href="reveiw.html" title="후기">후기</a></li>
                 <li><a href="event.html" title="이벤트">이벤트</a></li>
                 <li><a href="counseling.html" title="피부상담">피부상담</a></li>
-                <li><a href="cscenter.html" title="고객센터">고객센터 <i class="fas fa-angle-down"></i></a>
+                <li><a href="#" title="고객센터">고객센터 <i class="fas fa-angle-down"></i></a>
                     <ul class="sub">
                         <li><a href="./" title="자주묻는질문">자주묻는질문</a></li>
                         <li><a href="#" title="회원/멤버십">회원/멤버십</a></li>

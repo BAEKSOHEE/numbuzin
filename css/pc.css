@@ -10,10 +10,6 @@
 
 .c_btn, .t_btn{display:none;}
 
-.h_top{
-
-}
-
 header{
     width: 100%;
     height: 170px;
@@ -48,7 +44,7 @@ position: relative;
     right: -180px; top: 30px;
     width: 200px;
 }
-.lnb  a{
+.lnb a{
     text-decoration: none;
     color: #000;
     padding-left: 15px;
@@ -61,32 +57,84 @@ position: relative;
     background:none;
 }
 /* 검색모달창 */
-.modal_search{
-    background-color: #333;
+.search_modal{
+    background-color: #FF5006;
     position: fixed;
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 300px;
+    height: 230px;
     z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -300px;
+    transition: 0.35s;
 }
-.fa-xmark{
+.search_modal.active{
+    top: 0;
+}
+.c_search{
     position: absolute;
-    right: 10px;
-    top: 10px;
-    color: #777;
+    right: 180px;
+    top: 30px;
+    color: #fff;
     font-size: 2rem;
     cursor: pointer;
 }
 .search{
-    border: 1px solid #f00;
+    width: 500px;
 }
-.search .field{
-    border: 1px solid #00f;
+.search > .field{
+    display: flex;
+    position: relative;
 }
-.search .field input[type=search]{
+.search > .field:before{
+    content: '\e97a';
+    font-family:"xeicon";
+    position: absolute;
+    color: #000;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+}
+.search .field input[type=search],
+.search .field input[type=bottom]{
     padding: 15px;
+    border: none;
+    outline: none;
+    }
+    
+.search .field input[type=search]{
+    flex: 5;
+    padding-left: 50px;
 }
+
+.search .field input[type=button]{
+    flex: 1;
+    background-color: #000;
+    color: #fff;
+    opacity: 0.9;
+    cursor: pointer;
+}
+.search .field input[type=button]:hover{
+    opacity: 1;
+}
+.search .field input[type=search]::placeholder{
+    font-style: italic;
+}
+.search .field input[type=search]:focus::placeholder{
+opacity: 0;
+transition: 0.3s;
+}
+.hashtag{
+    padding-top: 10px;
+    font-size: 15px;
+    color: #fff;
+    display: none;
+}
+
 
 .h_bottom{
     width: 100%;
@@ -175,8 +223,12 @@ left: 1px;
     color: #FF5006;
 }
 
+/* 메인영역 */
 main{
     line-height: 50px;
+}
+section h2{
+    font-size: 1.6rem;
 }
 
 .swiper-slide{
@@ -220,8 +272,12 @@ main{
 }
 .new img{width: 1200px;}
 .sale{
-    width: 1200px; margin: 0px auto;
+    width: 100%;
     text-align: center;
+    background: #DAF6FF;
+}
+.sale_product{
+    width: 1200px; margin: 0px auto;
 }
 .sale ul{
     display: grid;
@@ -241,7 +297,9 @@ main{
 .sale .p_06{grid-area: p_06;}
 
 .event{
+    width: 100%;
     text-align: center;
+    background: #FFF0D9;
 }
 .event img{
     width: 350px; height: 400px;
