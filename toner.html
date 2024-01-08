@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스킨/토너</title>
+    <!-- 초기화 -->
+    <link rel="stylesheet" href="./css/reset.css" title="text/css">
+    <!-- 폰트어썸 아이콘폰트 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- 제이쿼리 라이브러리 연결하기 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- 제이쿼리 랩퍼 -->
+    <script>
+        $(document).ready(function(){
+            //1. 변수 선언
+            const mnu = $('.detail > ul > li > a'); //메인메뉴 변수 선언
+            //2. 메뉴 클릭시 해당 서브 나오게 하기
+            mnu.click(function(){
+                $('detail_s').slideUp(); //모든 서브메뉴 위로 접고
+                $(this).next().slideDown(); //선택한 메뉴의 서브만 나오게 한다.
+                $('i').removeClass('act'); //모든 i태그에 act서식을 제거하고
+                $(this).find('i').addClass('act'); //선택한 메뉴의 자손 i태그에 act서식을 적용한다.
+        });
+        });
+    </script>
+    <style>
+        .h_top{
+            width: 1200px;
+            margin: 0px auto;
+        }
+        header{
+    width: 100%;
+    height: 170px;
+    position: absolute;
+    z-index: 1000;
+    background: #fff;
+}
+.h_top{
+position: relative;
+}
+.h_top h1{
+    position: absolute;
+    left: 500px; top: 45px;
+}
+.h_top h1 img{
+    width: 210px;
+    text-align: center;
+}
+.h_top > .lnb{
+    position: absolute;
+    left: auto;
+    right: -70px; top: 20px;
+    width: 200px;
+    
+}
+.lnb  a{
+    text-decoration: none;
+    color: #000;
+    }
+    
+.h_top > .lnb > ul{
+    flex-wrap: nowrap;
+}
+.h_top > .lnb > ul >li{
+    background:none;
+}
+.h_bottom{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 120px; left: 0px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.h_bottom:hover{height: 300px;}
+.gnb{
+    position: static;
+    width: 100%; height: 60px;
+    left: 0px; top: 0px;
+    background: rgba(255,255,255,.8);
+    border-top: 2px solid #ccc;
+}
+.gnb a{
+    text-decoration: none;
+    color: #000;
+}
+.gnb > ul{
+    transform: translateY(10px);
+    padding: 0px 20px;
+    line-height: 32px;
+    display: flex;
+    justify-content: space-around;
+}
+.gnb > ul > li{
+    padding: 0px 30px;
+    border:none;
+    position:relative;
+
+}
+.gnb > ul > li:first-child::after, .gnb > ul > li:last-child::after{
+display: block;
+content: "";
+width: 500px;
+height: 300px;
+position: absolute;
+background:rgba(255,255,255,.8);
+}
+.gnb > ul > li:first-child::after{
+    left: -400px;
+}
+.gnb > ul > li:last-child::after{
+    left: 5px;
+}
+
+.gnb > ul > li:nth-child(5)::after,.gnb > ul > li:nth-child(6)::after, .gnb > ul > li:nth-child(7)::after {
+display: block;
+content: "";
+width: 150px;
+height: 300px;
+background: rgba(255,255,255,.8);
+position: absolute;
+left: 1px;
+}
+
+.h_bottom:hover{.sub{
+    display: block;
+    }}
+
+.sub{
+    display:block;
+    position:absolute;
+    left:0px;top:50px;
+    width:100%;height:240px;
+    padding:10px 20px;
+    z-index: 9000;
+    background: rgba(255,255,255,.8);
+    }
+
+.sub a{
+    padding: 0px 3%;
+    line-height:180%;
+    font-size: 0.95rem;
+    }
+
+.sub a:hover{
+    font-weight: bold;
+    color: #FF5006;
+}
+
+
+/* 제품 */
+
+main{
+    padding-top:300px ;
+    width: 1200px;    height: 100%;
+    margin: 0px auto;
+    line-height: 30px;
+}
+.bs_img, .bs_story{padding: 20px 0px;}
+.product h2{
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 400;
+    color: #FF5006;
+}
+
+.bs_img h2{display: none;}
+#b_img{width: 400px;}
+.bs_img{
+    width: 500px; border: 1px solid #000;
+    margin-top: 50px;
+    transform: translateX(350px);
+}
+.bs_story{
+    padding: 30px 0px;
+    text-align: center;
+}
+.bs_img ul{display: flex;}
+.bs_img ul li{
+    list-style: none;
+    overflow: hidden;
+}
+.bs_img ul li img{
+    
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+.bs_img ul li img:focus{border: 2px solid #ff0;}
+.product2{
+    text-align: center;
+    
+}
+.product2 h2{
+    color: #FF5006;
+    padding: 30px;
+    font-weight: 1.3rem;
+    }
+    a{color: #333; text-decoration: none;}
+        .detail{
+            width: 100%;
+            background: fff;
+        }
+        .detail > ul{
+            width: 400px;
+            margin: 0px auto;
+        }
+        .detail > ul > li{
+            text-indent: 10px;
+            clear: right;
+            border-bottom:1px solid #fff;
+        }
+
+        .detail > ul > li > a{
+            display: block;
+            width: 100%;
+            line-height: 40px;
+            font-size: 1rem;
+            background-color: rgb(245, 211, 62);
+        }
+
+        .detail > ul > li a:hover{text-decoration: underline;}
+    i.fa-angle-down{
+            float: right;
+            font-size: 1.3rem;
+            padding: 10px 8px;
+        }
+
+    .act{
+            transform: rotate(180deg) translateX(-10px) !important;
+        }
+        .detail_s{
+            background: #fff;
+            display: block;
+            display: none;
+            width: 100%;
+        }
+        .detail_s > li{}
+        .detail_s > li > a{
+            line-height: 36px;
+            font-size: 0.95rem;
+        }
+        .top{
+            width: 50px; line-height: 50px;
+            text-align: center;
+            border-radius: 50%;
+            color: #fff;
+            padding: 10px;
+            background:#000;
+            font-weight: bold;
+            text-decoration: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+
+            opacity: 0; /* 투명도 적용안함 */
+            visibility: hidden; /* 콘텐츠 숨기기 */
+            transition: 0.5s; /* 서서히 나오고자 할 때 시간속성을 미리 넣어줌 */
+            z-index: 9999;
+        }
+
+        /* top버튼에 적용할 서식 */
+        .act5{
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="h_top">
+            <h1>
+                <a href="index.html" title="메인페이지로 이동"><img src="./images/logo.png" alt="상단로고"></a>
+            </h1>
+
+        <nav class="lnb">
+            <a href="login.html" title="로그인">로그인</a></li>
+            <a href="join.html" title="회원가입">회원가입</a></li>
+        </nav>
+    </div>
+    <!-- 메인 내비게이션 -->
+    <div class="h_bottom">
+        <nav class="gnb">
+
+            <ul>
+                <li><a href="skin.html" title="스킨케어">스킨케어 <i class="fas fa-angle-down"></i></a>
+                    <ul class="sub">
+                        <li><a href="./toner.html" title="스킨/토너">스킨/토너</a></li>
+                        <li><a href="#" title="로션/에멀젼">로션/에멀젼</a></li>
+                        <li><a href="#" title="에센스">에센스</a></li>
+                        <li><a href="#" title="세럼">세럼</a></li>
+                        <li><a href="#" title="앰플">앰플</a></li>
+                        <li><a href="#" title="크림">크림</a></li>
+                        <li><a href="#" title="오일">오일</a></li>
+                        <li><a href="#" title="미스트">미스트</a></li>
+                        <li><a href="#" title="패드">패드</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="sun.html" title="선케어">선케어 <i class="fas fa-angle-down"></i></a>
+                    <ul class="sub">
+                        <li><a href="#" title="선크림">선크림</a></li>
+                        <li><a href="#" title="선블록">선블록</a></li>
+                    </ul>
+                </li>
+                    
+                <li><a href="pack.html" title="마스크팩">마스크팩 <i class="fas fa-angle-down"></i></a>
+                    <ul class="sub">
+                        <li><a href="#" title="진정팩">진정팩</a></li>
+                        <li><a href="#" title="미백팩">미백팩</a></li>
+                        <li><a href="#" title="세럼팩">세럼팩</a></li>
+                        <li><a href="#" title="쿨링팩">쿨링팩</a></li>
+                    </ul>
+                </li>
+                    
+                <li><a href="cleansing.html" title="클렌징">클렌징 <i class="fas fa-angle-down"></i></a>
+                    <ul class="sub">
+                        <li><a href="#" title="클렌징폼">클렌징폼</a></li>
+                        <li><a href="#" title="클렌징오일">클렌징오일</a></li>
+                        <li><a href="#" title="클렌징워터">클렌징워터</a></li>
+                        <li><a href="#" title="클렌징밀크">클렌징밀크</a></li>
+                        <li><a href="#" title="클렌징크림">클렌징크림</a></li>
+                        <li><a href="#" title="클렌징밤">클렌징밤</a></li>
+                        <li><a href="#" title="스크럽">스크럽</a></li>
+                        <li><a href="#" title="필링">필링</a></li>
+                    </ul>
+                </li>
+                
+            <li><a href="reveiw.html" title="후기">후기</a></li>
+            <li><a href="event.html" title="이벤트">이벤트</a></li>
+            <li><a href="counseling.html" title="피부상담">피부상담</a></li>
+            <li><a href="cscenter.html" title="고객센터">고객센터 <i class="fas fa-angle-down"></i></a>
+                <ul class="sub">
+                    <li><a href="./" title="자주묻는질문">자주묻는질문</a></li>
+                    <li><a href="#" title="회원/멤버십">회원/멤버십</a></li>
+                    <li><a href="#" title="1:1문의">1:1문의</a></li>
+                    <li><a href="#" title="공지사항">공지사항</a></li>
+                </ul>
+            </li>
+        </nav>
+    </div>
+</header>
+
+    <main>
+        <section class="product">
+            <h2>제품</h2>
+            <article class="bs_img">
+                <h2>제품</h2>
+                <img src="./images/p01.jpg" alt="제품1" id="b_img">
+                <ul>
+                    <li><img src="./images/p01.jpg" alt="제품1-1" class="s_img"></li>
+                    <li><img src="./images/p02.jpg" alt="제품1-2" class="s_img"></li>
+                    <li><img src="./images/p03.jpg" alt="제품1-3" class="s_img"></li>
+                </ul>
+            </article>
+            <article class="bs_story">
+                <h3>5번 비타민C 뿌려만든 글루타치온 필름팩</h2>
+                <P>비타민C 뿌려 만든 노란 필름시트에 고농축 글루타치온C 앰플을 꽉 채워 담아 맑고 환한 피부를 만들어주는 고기능 미백 마스크팩</P>
+                <nav class="detail">
+                    <ul>
+                        <li><a href="#" title="내용물의 용량">내용물의 용량 <i class="fas fa-angle-down"></i></a>
+                            <ul class="detail_s">
+                                <li><a href="#" title="27ml / 총 10매">27ml / 총 10매</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" title="제품 주요사양">제품 주요사양 <i class="fas fa-angle-down"></i></a>
+                            <ul class="detail_s">
+                                <li><a href="#" title="모든 피부용">모든 피부용</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" title="사용기한">사용기한 <i class="fas fa-angle-down"></i></a>
+                            <ul class="detail_s">
+                                <li><a href="#" title="제조일로부터 36개월">제조일로부터 36개월</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </article>
+        </section>
+        <section class="product2">
+            <h2>제품 상세정보</h2>
+            <img src="./images/product.jpg" alt="제품상세정보">
+        </section>
+        
+        <a href="#" title="위로 바로가기" class="top">Top</a>
+
+    </main>
+    <script>
+        //큰 사진 변경하기 위한 변수 저장하기
+        let b_img = document.querySelector('#b_img');
+
+        //작은 썸네일 사진 변수로 저장하기
+        let s_img = document.querySelectorAll('.s_img')
+
+        //반복문을 통해 목록(li)안에 있는 img를 개별적으로 선택하여 각각 '클릭이벤트'를 만든다.
+        for(let i=0; i<s_img.length; i++){
+            console.log(s_img[i]); //목록 안에 있는 이미지를 출력
+            s_img[i].addEventListener('click', function(){
+            let src = this.src; //사용자가 선택한 이미지의 src값을 가져와서 변수에 담는다.
+            console.log(src); //이미지 src값 확인
+
+            //src변수값을 b_img의 src속성값에 대입하여 이미지가 변경되도록 한다.
+            b_img.setAttribute('src', src);
+
+            for(let j=0; j<s_img.length; j++){
+                console.log(s_img[j]);
+                s_img[j].style.border='3px solid rgba(0,0,0,.0)';
+                this.style.border='3px solid #FF5006';
+            }
+                });
+            }
+    
+        //1. js로 구현 : 브라우저 윈도우 세로스크롤 값을 사용하여 top이 보이게/숨기게 한다.
+        //변수생성
+        let scrollTop;
+        const t_btn = document.querySelector('.top');
+    
+        window.addEventListener('scroll',function(){
+          scrollTop = this.pageYOffset; //위에서 떨어진 값을 변수에 담는다.
+          console.log(scrollTop); //세로스크롤 값을 확인한다.
+          if(scrollTop>=800){ //만약에 스크롤값이 800이상일때 
+            //top버튼 보이게한다.
+            t_btn.classList.add('act5');
+            //header에 act1을 적용해서 고정배치한다.
+            h_pos.classList.add('act1');
+
+        }else{//스크롤값이 800보다 작으면
+            //top버튼 숨긴다.
+            t_btn.classList.remove('act5');
+            h_pos.classList.remove('act1');
+        }
+        });    
+            
+    </script>
+
+</body>
+</html>

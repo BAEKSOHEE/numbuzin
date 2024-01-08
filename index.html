@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>넘버즈인 홈페이지</title>
+    <!-- 초기화 -->
+    <link rel="stylesheet" href="./css/reset.css" title="text/css">
+    <!-- 공통서식(글꼴, 크기, 색상, 링크) -->
+    <link rel="stylesheet" href="./css/base.css" title="text/css">
+    <!-- pc해상도에 맞는 서식 -->
+    <link href="./css/pc.css" rel="stylesheet" type="text/css">
+    <!-- 폰트어썸 아이콘폰트 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- 파비콘 이미지 삽입하기 -->
+    <link href="./images/DkY05v1i.ico" type="image/x-icon" rel="shortcut icon">
+    <!-- 슬라이드 스크립트 -->
+    <script src="./script/script.js" defer></script>
+</head>
+<body>
+    <!-- 헤더영역 -->
+    <header>
+        <div class="h_top">
+            <h1>
+                <a href="index.html" title="메인페이지로 이동"><img src="./images/logo.png" alt="상단로고"></a>
+            </h1>
+
+        <nav class="lnb">
+            <a href="login.html" title="로그인">로그인</a></li>
+            <a href="join.html" title="회원가입">회원가입</a></li>
+            <a href="#" title="검색" id="search"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </nav>
+        </div>
+        <div class="search_modal">
+            <i class="fa-solid fa-xmark"></i>
+            <div class="sealch">
+                <div class="field">
+                    <input type="search">
+                    <input type="button" value="search">
+                </div>
+            </div>
+        </div>
+
+        <label for="toggle" class="t_btn">
+            <i class="fas fa-bars"></i>
+        </label>
+
+        <!-- 메인 내비게이션 -->
+        <div class="h_bottom">
+            <nav class="gnb">
+                <label for="toggle" class="c_btn"><i class="fa-solid fa-circle-xmark"></i></label>
+                <ul>
+                    <li><a href="skin.html" title="스킨케어">스킨케어 <i class="fas fa-angle-down"></i></a>
+                        <ul class="sub">
+                            <li><a href="./toner.html" title="스킨/토너">스킨/토너</a></li>
+                            <li><a href="#" title="로션/에멀젼">로션/에멀젼</a></li>
+                            <li><a href="#" title="에센스">에센스</a></li>
+                            <li><a href="#" title="세럼">세럼</a></li>
+                            <li><a href="#" title="앰플">앰플</a></li>
+                            <li><a href="#" title="크림">크림</a></li>
+                            <li><a href="#" title="오일">오일</a></li>
+                            <li><a href="#" title="미스트">미스트</a></li>
+                            <li><a href="#" title="패드">패드</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="sun.html" title="선케어">선케어 <i class="fas fa-angle-down"></i></a>
+                        <ul class="sub">
+                            <li><a href="#" title="선크림">선크림</a></li>
+                            <li><a href="#" title="선블록">선블록</a></li>
+                        </ul>
+                    </li>
+                        
+                    <li><a href="pack.html" title="마스크팩">마스크팩 <i class="fas fa-angle-down"></i></a>
+                        <ul class="sub">
+                            <li><a href="#" title="진정팩">진정팩</a></li>
+                            <li><a href="#" title="미백팩">미백팩</a></li>
+                            <li><a href="#" title="세럼팩">세럼팩</a></li>
+                            <li><a href="#" title="쿨링팩">쿨링팩</a></li>
+                        </ul>
+                    </li>
+                        
+                    <li><a href="cleansing.html" title="클렌징">클렌징 <i class="fas fa-angle-down"></i></a>
+                        <ul class="sub">
+                            <li><a href="#" title="클렌징폼">클렌징폼</a></li>
+                            <li><a href="#" title="클렌징오일">클렌징오일</a></li>
+                            <li><a href="#" title="클렌징워터">클렌징워터</a></li>
+                            <li><a href="#" title="클렌징밀크">클렌징밀크</a></li>
+                            <li><a href="#" title="클렌징크림">클렌징크림</a></li>
+                            <li><a href="#" title="클렌징밤">클렌징밤</a></li>
+                            <li><a href="#" title="스크럽">스크럽</a></li>
+                            <li><a href="#" title="필링">필링</a></li>
+                        </ul>
+                    </li>
+                    
+                <li><a href="reveiw.html" title="후기">후기</a></li>
+                <li><a href="event.html" title="이벤트">이벤트</a></li>
+                <li><a href="counseling.html" title="피부상담">피부상담</a></li>
+                <li><a href="cscenter.html" title="고객센터">고객센터 <i class="fas fa-angle-down"></i></a>
+                    <ul class="sub">
+                        <li><a href="./" title="자주묻는질문">자주묻는질문</a></li>
+                        <li><a href="#" title="회원/멤버십">회원/멤버십</a></li>
+                        <li><a href="#" title="1:1문의">1:1문의</a></li>
+                        <li><a href="#" title="공지사항">공지사항</a></li>
+                    </ul>
+                </li>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 메인영역 -->
+    <main>
+        <section class="m_banner">
+            <h2></h2>
+            <div class="m_slide">
+                <div class="swiper-wrapper">
+                    <span class="m_txt">What's <br>Your Number?</span>
+                        <div class="swiper-slide">
+                            <ul class="slide">
+                                <li><a href="#" title="제품1"><img src="./images/product_05-1.png" alt="제품1"></a></li>
+                                <li><a href="#" title="제품2"><img src="./images/product_06-1.png" alt="제품2"></a></li>
+                                <li><a href="#" title="제품3"><img src="./images/product_07-1.png" alt="제품3"></a></li>
+                                <li><a href="#" title="제품4"><img src="./images/product_08-1.png" alt="제품4"></a></li>
+                                <li><a href="#" title="제품5"><img src="./images/product_09-1.png" alt="제품5"></a></li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="new">
+            <h2>NEW</h2>
+            <a href="#" title="new"><img src="./images/product_01-1-1.png" alt="신상품"></a>
+        </section>
+
+        <section class="sale">
+            <h2>SALE</h2>
+            <ul class="sale_product">
+                <li class="p_01"><a href="#" title="세일상품1"><img src="./images/sale_01.png" alt="세일상품1"></a></li>
+                <li class="p_02"><a href="#" title="세일상품2"><img src="./images/sale_02.png" alt="세일상품2"></a></li>
+                <li class="p_03"><a href="#" title="세일상품3"><img src="./images/sale_03.png" alt="세일상품3"></a></li>
+                <li class="p_04"><a href="#" title="세일상품4"><img src="./images/sale_04.png" alt="세일상품4"></a></li>
+                <li class="p_05"><a href="#" title="세일상품5"><img src="./images/sale_05.png" alt="세일상품5"></a></li>
+                <li  class="p_06"><a href="#" title="세일상품6"><img src="./images/sale_06.png" alt="세일상품6"></a></li>
+            </ul>
+        </section>
+
+        <section class="free">
+            <h2>FREE</h2>
+            <img src="./images/counselor.jpg" alt="피부상담">
+        </section>
+
+        <section class="event">
+            <h2>EVENT</h2>
+            <a href="#" title="이벤트1"><img src="./images/event_01.png" alt="이벤트1"></a>
+            <a href="#" title="이벤트2"><img src="./images/event_02.png" alt="이벤트2"></a>
+            <a href="#" title="이벤트3"><img src="./images/event_03.png" alt="이벤트3"></a>
+        </section>
+
+        <a href="#" title="위로 바로가기" id="top">Top</a>
+
+    </main>
+
+    <!-- 푸터영역 -->
+    <footer>
+        <a href="index.html" title="메인페이지로 이동" id="b_logo"><img src="./images/logo.png" alt="하단로고"></a>
+        <div class="f_txt">
+                    <a href="#" title="이용약관"><span class="f_bold">이용약관</span></a> &#x007C; 
+                    <a href="#" title="개인정보처리방침"><span class="f_bold">개인정보처리방침</span></a>
+                    <p><span class="f_bold">회사명</span> (주)비니우 &#x007C; <span class="f_bold">대표자</span> 김대영 &#x007C; <span class="f_bold">주소</span> 서울특별시 서초구 서초대로 411 GT TOWER 14층<br>
+                    <span class="f_bold">사업자등록번호</span> 833-87-01017 &#x007C; <span class="f_bold">통신판매업신고</span> 2021-서울서초-4230 &#x007C; <span class="f_bold">개인정보책임자</span> 손종안  &#x007C; <span class="f_bold">호스팅제공자</span>(주)고도소프트 <span class="f_bold">[사업자 정보 조회]</span></p>
+            <p><span class="f_bold">Customer Center :</span> 080-850-7771</p>
+            <p><span class="f_bold">홍보 및 제휴문의 :</span> numbuzin_kr_abs@benow.co.kr</p>
+            <p><span class="f_bold">해외수출 및 기타문의 :</span> global_2@benow.co.kr</p>
+            
+        </div>
+        <div class="sns">
+        <a href="https://www.instagram.com/numbuzin_official/" title="instagram" id="insta"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.youtube.com/hashtag/%EB%84%98%EB%B2%84%EC%A6%88%EC%9D%B8" title="youtube" id="youtube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://pf.kakao.com/_IsSBj" title="kakao" id="kakao"><img src="./images/kakao_c_logo.jpg" alt="카카오톡 채널 로고"></a>
+        </div>
+    </footer>
+
+
+</body>
+</html>
