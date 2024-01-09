@@ -14,16 +14,10 @@
   header {
     width: 100%;
     height: 140px;
-    position: absolute;
+    position: relative;
     z-index: 1000;
     background: #fff;
     border-bottom: 2px solid #ccc;
-  }
-
-  .header {
-    position: relative;
-    top: 0;
-    left: 0;
   }
 
   .h_top h1 {
@@ -39,20 +33,22 @@
   }
 
   .t_btn {
-    position: absolute;
-    left: 30px;
-    top: 33%;
-    font-size: 2rem;
+    left:auto;
+    right:5px;
+    top:110px;
+    font-size:2rem;
   }
 
   .c_btn {
     font-size: 2rem;
+    cursor: pointer;
   }
 
-  .lnb {
-    position: absolute;
-    right: 30px;
-    top: 35%;
+  .h_top > .lnb{
+    position:absolute;
+    left:auto;
+    right:0px;top:20px;
+    width:300px;
   }
 
   .lnb a {
@@ -66,23 +62,28 @@
   .h_top>.lnb>ul>li {
     background: none;
   }
+
+  /* h_bottom 서식 */
+  .h_bottom{}
   .gnb{
-    width: 80%; height: 100%;
+    width: 100%; height: 100%;
     position: fixed;
-    /* left: -100px;top: 0; */
-    background: #FFE0C9;
+    left: 0%; top: 0px;
     z-index: 9000;
+    background: rgba(0,0,0,.5);
     transition: 0.5s;
-    
   }
+
   .gnb > ul{
-    padding: 50px 1.2%;
+    width: 80%; height: 100%;
+    float: left;
+    padding: 70px 1.2%;
     background-color: #FF5006;
-    width: 100%;
     }
   .gnb > ul > li{
     border-bottom: 2px solid #fff;
     text-indent: 20px;
+    line-height: 30px;
   }
   .gnb > ul > li > a{
     color:#fff;
@@ -90,17 +91,28 @@
     display:block;
   }
   .gnb > ul > li > a > i.fa-angle-down{
+    float: right;
     font-size:1.1rem;
     padding:6px 8px;
   } 
 
-  .sub{display:none;}
+  .sub{display:none;
+  background-color: #ff510662;
+  }
 
   .c_btn{
     position: absolute;
-    right: 4%;
-    top: 2%;
+    right: 4%; top: 2%;
+    padding: 6px;
   }
+/* toggle클릭시 .lnb, .gnb, fieldset */
+#toggle:checked + header > .h_top > .lnb{
+  left:0%;
+}
+
+#toggle:checked + header > .h_bottom > .gnb{
+  left:0%;
+}
 
 
   /* 검색모달창 */

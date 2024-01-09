@@ -53,31 +53,6 @@
             </div>
         </div>
 
-        <!-- 검색 모달창 스크립트 -->
-        <script>
-            $('.search .field input[type=search]').focus(function(){
-                $(this).parent().next().css('display', 'block')
-            }).blur(function(){
-                $(this).parent().next().css('display', 'none')
-            });
-            $('.o_search').click(function(){
-                $('.search_modal').addClass('active')
-            });
-            $('.c_search, section').click(function(){
-                $('.search_modal').removeClass('active')
-            });
-
-            // gnb 아코디언
-            $(document).ready(function(){
-                const menu = $('.gnb > ul > li > a');
-                menu.click(function(){
-                    $(this).next("ul").toggleClass("hide");
-            });
-
-            });
-
-        </script>
-
         <label for="toggle" class="t_btn">
             <i class="fas fa-bars"></i>
         </label>
@@ -148,19 +123,33 @@
     <!-- 메인영역 -->
     <main>
         <section class="m_banner">
-            <h2></h2>
+            <h2>&nbsp;</h2>
             <div class="m_slide">
                 <div class="swiper-wrapper">
                     <span class="m_txt">What's <br>Your Number?</span>
                         <div class="swiper-slide">
                             <ul class="slide">
-                                <li><a href="#" title="제품1"><img src="./images/product_05-1.png" alt="제품1"></a></li>
-                                <li><a href="#" title="제품2"><img src="./images/product_06-1.png" alt="제품2"></a></li>
-                                <li><a href="#" title="제품3"><img src="./images/product_07-1.png" alt="제품3"></a></li>
-                                <li><a href="#" title="제품4"><img src="./images/product_08-1.png" alt="제품4"></a></li>
-                                <li><a href="#" title="제품5"><img src="./images/product_09-1.png" alt="제품5"></a></li>
+                                <li><a href="#" title="제품1"><img src="./images/m_p_01.png" alt="제품1"></a></li>
+                                <li><a href="#" title="제품2"><img src="./images/m_p_02.png" alt="제품2"></a></li>
+                                <li><a href="#" title="제품3"><img src="./images/m_p_03.png" alt="제품3"></a></li>
+                                <li><a href="#" title="제품4"><img src="./images/m_p_04.png" alt="제품4"></a></li>
+                                <li><a href="#" title="제품5"><img src="./images/m_p_05.png" alt="제품5"></a></li>
+                                <li><a href="#" title="제품5"><img src="./images/m_p_05.png" alt="제품5"></a></li>
+                                <li><a href="#" title="제품5"><img src="./images/m_p_05.png" alt="제품5"></a></li>
+                                <li><a href="#" title="제품5"><img src="./images/m_p_05.png" alt="제품5"></a></li>
+                                
                             </ul>
+                            <div class="ctrl_all">
+                                <span class="ctrl act">&nbsp;</span>
+                                <span class="ctrl">&nbsp;</span>
+                                <span class="ctrl">&nbsp;</span>
+                                <span class="ctrl">&nbsp;</span>
+                                <span class="ctrl">&nbsp;</span>
+                                <span class="ctrl">&nbsp;</span>
+                                <span class="ctrl">&nbsp;</span>
+                                </div>
                         </div>
+                        
                 </div>
             </div>
         </section>
@@ -218,6 +207,53 @@
         </div>
     </footer>
 
+    <!-- 검색 모달창 스크립트 -->
+    <script>
+    $('.search .field input[type=search]').focus(function(){
+        $(this).parent().next().css('display', 'block')
+    }).blur(function(){
+        $(this).parent().next().css('display', 'none')
+    });
+    $('.o_search').click(function(){
+        $('.search_modal').addClass('active')
+    });
+    $('.c_search, section').click(function(){
+        $('.search_modal').removeClass('active')
+    });
+    </script>
+
+    <!-- 메인배너 스크립트 -->
+    <script>
+        $(document).ready(function(){
+            let i=0;
+            const ctrl = $('.swiper-slide > .ctrl_all > .ctrl')
+
+            ctrl.click(function(){
+                i = $(this).index();
+                i = -(i*$('.m_slide .slide > li').width());
+                $('.slide').animate({'left':i},500);
+                $('.ctrl').removeClass('act');
+                $(this).addClass('act');
+                console.log(i);
+            });
+
+            function main_slide(){
+                if(i==8){
+                    i=0;
+                }else{
+                    i++;
+                }
+                i = -(i*$('.m_slide .slide > li').width());
+                // $('.slide').animate({'left':i},500);
+                // $('.ctrl').removeClass('act');
+                // $(this).addClass('act');
+                console.log(i);
+            }
+
+            let Timer = setInterval(main_slide, 1000);
+
+        });
+    </script>
 
 </body>
 </html>
