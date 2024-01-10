@@ -23,7 +23,7 @@
     <!-- 파비콘 이미지 삽입하기 -->
     <link href="./images/DkY05v1i.ico" type="image/x-icon" rel="shortcut icon">
     <!-- 슬라이드 스크립트 -->
-    <script src="./script/script.js" defer></script>
+    <!-- <script src="./script/script.js" defer></script> -->
 </head>
 <body>
     <!-- 헤더영역 -->
@@ -34,8 +34,11 @@
             </h1>
 
         <nav class="lnb">
-            <a href="login.html" title="로그인">로그인</a></li>
-            <a href="join.html" title="회원가입">회원가입</a></li>
+            <a href="login.html" title="로그인">
+                <i class="fa-regular fa-user"></i>
+                <span class="lj_txt">로그인</span></a></li>
+            <a href="join.html" title="회원가입">
+                <span class="lj_txt">회원가입</span></a></li>
             <a href="#" title="검색" id="search"><i class="o_search fa-solid fa-magnifying-glass"></i></a>
         </nav>
         </div>
@@ -140,7 +143,7 @@
                                 
                             </ul>
                             <div class="ctrl_all">
-                                <span class="ctrl act">&nbsp;</span>
+                                <span class="ctrl act3">&nbsp;</span>
                                 <span class="ctrl">&nbsp;</span>
                                 <span class="ctrl">&nbsp;</span>
                                 <span class="ctrl">&nbsp;</span>
@@ -156,11 +159,14 @@
 
         <section class="new">
             <h2>NEW</h2>
-            <a href="#" title="new"><img src="./images/product_01-1-1.png" alt="신상품"></a>
+            <a href="#" title="new" class="new1"><img src="./images/product_01-1-1.png" alt="신상품"></a>
+            <a href="#" title="new" class="new2"><img src="./images/product_01-1-2.png" alt="신상품"></a>
         </section>
 
         <section class="sale">
             <h2>SALE</h2>
+            <article class="sale_all">
+                <h2 class="none">sale</h2>
             <ul class="sale_product">
                 <li class="p_01"><a href="#" title="세일상품1"><img src="./images/sale_01.png" alt="세일상품1"></a></li>
                 <li class="p_02"><a href="#" title="세일상품2"><img src="./images/sale_02.png" alt="세일상품2"></a></li>
@@ -169,6 +175,15 @@
                 <li class="p_05"><a href="#" title="세일상품5"><img src="./images/sale_05.png" alt="세일상품5"></a></li>
                 <li  class="p_06"><a href="#" title="세일상품6"><img src="./images/sale_06.png" alt="세일상품6"></a></li>
             </ul>
+            <div class="sc_btn_all">
+                <span class="sc_btn">&nbsp;</span>
+                <span class="sc_btn">&nbsp;</span>
+                <span class="sc_btn">&nbsp;</span>
+                <span class="sc_btn">&nbsp;</span>
+                <span class="sc_btn">&nbsp;</span>
+                <span class="sc_btn">&nbsp;</span>
+            </div>
+        </article>
         </section>
 
         <section class="free">
@@ -178,9 +193,12 @@
 
         <section class="event">
             <h2>EVENT</h2>
-            <a href="#" title="이벤트1"><img src="./images/event_01.png" alt="이벤트1"></a>
-            <a href="#" title="이벤트2"><img src="./images/event_02.png" alt="이벤트2"></a>
-            <a href="#" title="이벤트3"><img src="./images/event_03.png" alt="이벤트3"></a>
+            <article class="event_imgs">
+                <h2 class="none">event</h2>
+                <a href="#" title="이벤트1"><img src="./images/event_01.png" alt="이벤트1"></a>
+                <a href="#" title="이벤트2"><img src="./images/event_02.png" alt="이벤트2"></a>
+                <a href="#" title="이벤트3"><img src="./images/event_03.png" alt="이벤트3"></a>
+            </article>
         </section>
 
         <a href="#" title="위로 바로가기" id="top">Top</a>
@@ -232,8 +250,8 @@
                 i = $(this).index();
                 i = -(i*$('.m_slide .slide > li').width());
                 $('.slide').animate({'left':i},500);
-                $('.ctrl').removeClass('act');
-                $(this).addClass('act');
+                $('.ctrl').removeClass('act3');
+                $(this).addClass('act3');
                 console.log(i);
             });
 
@@ -247,13 +265,62 @@
                 // $('.slide').animate({'left':i},500);
                 // $('.ctrl').removeClass('act');
                 // $(this).addClass('act');
-                console.log(i);
+                // console.log(i);
             }
 
             let Timer = setInterval(main_slide, 1000);
 
         });
+
     </script>
+
+    <!-- 아코디언 메뉴 스크립트 -->
+    <script>
+        $(document).ready(function(){
+            const mnu = $('.gnb > ul > li > a');
+
+            mnu.click(function(){
+                $('.sub').slideUp();
+                $(this).next().slideDown();
+                $('i').removeClass('act');
+                $(this).find('i').addClass('act');
+            });
+        });
+
+    </script>
+
+    <!-- gnb 메뉴 스크립트 -->
+    <script>
+            $('.t_btn').click(function(){
+                $('.gnb').css('display','block');
+            });
+            $('.c_btn').click(function(){
+                $('.gnb').css('display','none');
+            });
+            
+    </script>
+
+    <!-- 세일 콘트롤 버튼 스크립트 -->
+    <script>
+    $(document).ready(function(){
+        let c=0;
+        const scbtn = $('.sale_all > .sc_btn_all > .sc_btn');
+
+        scbtn.click(function(){
+            c = $(this).index();
+            console.log(c);
+            c = -(c*$('.sale_product > li').width());
+            console.log(c);
+            $('.sale_product').animate({'left':c},500);
+            $('.sale_all div > .sc_btn').removeClass('act3');
+            $(this).addClass('act3');
+        });
+        });
+
+
+
+    
+</script>
 
 </body>
 </html>
