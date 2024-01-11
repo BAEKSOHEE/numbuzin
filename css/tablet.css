@@ -64,6 +64,8 @@
     font-weight: bold;
     color: #FF5006;
 }
+.lnb i.fa-regular{display: none;}
+
 .o_search{color: #FF5006;}
 
   /* h_bottom 서식 */
@@ -241,7 +243,6 @@ section h2{font-size: 1.6rem;}
     width: 100%; height: 500px;
     left: 250px;
     position: relative;
-    border: 3px solid #f00;
     overflow: hidden;
 }
 .slide{
@@ -311,6 +312,11 @@ section h2{font-size: 1.6rem;}
       background: #FFF0D9;
       
   }
+  .event_product{display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0px auto;}
+
   .event img{
     width: 100%; height: 330px;
   }
