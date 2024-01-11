@@ -6,7 +6,7 @@
   .h_top,
   .gnb>ul,
   .f_txt {
-    width: 1200px;
+    width: 100%;
     margin: 0px auto;
   }
 
@@ -305,13 +305,15 @@ section h2{font-size: 1.6rem;}
   .sale .p_04{grid-area: p_04;}
   .sale .p_05{grid-area: p_05;}
   .sale .p_06{grid-area: p_06;}
-  
+  .ctrl2_all{display: none;}
+
   .event{
       width: 100%;
       text-align: center;
       background: #FFF0D9;
       
   }
+  .ctrl3_all{display: none;}
   .event_product{display: flex;
     justify-content: space-around;
     width: 100%;
