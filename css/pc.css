@@ -235,7 +235,8 @@ main{
 section h2{font-size: 1.6rem;}
 .m_banner{
     background: #FFF7B5;
-    width: 100%;}
+    width: 100%;
+    overflow: hidden;}
 .m_slide{
     height: 70vh;}
 .m_txt{
@@ -285,7 +286,7 @@ section h2{font-size: 1.6rem;}
     transform: translate(230px, 450px);
     background: #fff;
 }
-.act{background: #FF5006;}
+.act{background: #FF5006 !important;}
 
 
 
@@ -298,6 +299,7 @@ section h2{font-size: 1.6rem;}
 .new, .free{
     text-align: center;
 }
+.free2{display: none;}
 .new img{width: 1200px;}
 .sale{
     width: 100%;

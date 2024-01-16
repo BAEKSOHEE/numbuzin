@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "../넘버즈인/numbuzin/css"
+		},
+		{
+			"path": "../넘버즈인/numbuzin/images"
+		},
+		{
+			"path": "../넘버즈인/numbuzin/script"
+		},
+		{
+			"path": "../넘버즈인"
+		},
+		{
+			"path": "../코딩"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "넘버즈인"
+	}
+}

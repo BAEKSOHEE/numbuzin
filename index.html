@@ -145,9 +145,9 @@
                             
                         </ul>
                             <div class="ctrl_all">
+                                <span class="ctrl act">&nbsp;</span>
                                 <span class="ctrl">&nbsp;</span>
                                 <span class="ctrl">&nbsp;</span>
-                                <span class="ctrl act3">&nbsp;</span>
                                 <span class="ctrl">&nbsp;</span>
                                 <span class="ctrl">&nbsp;</span>
                                 <span class="ctrl">&nbsp;</span>
@@ -178,7 +178,7 @@
                 <li  class="p_06"><a href="#" title="세일상품6"><img src="./images/sale_06.png" alt="세일상품6"></a></li>
             </ul>
             <div class="ctrl2_all">
-                <span class="ctrl2 act3">&nbsp;</span>
+                <span class="ctrl2 act">&nbsp;</span>
                     <span class="ctrl2">&nbsp;</span>
                     <span class="ctrl2">&nbsp;</span>
                     <span class="ctrl2">&nbsp;</span>
@@ -190,7 +190,8 @@
         
         <section class="free">
             <h2>FREE</h2>
-            <img src="./images/counselor.jpg" alt="피부상담">
+            <img src="./images/counselor.jpg" alt="피부상담" class="free1">
+            <img src="./images/counselor_m.jpg" alt="피부상담" class="free2">
         </section>
 
         <section class="event">
@@ -203,7 +204,7 @@
             </ul>
             </div>
             <div class="ctrl3_all">
-                <span class="ctrl2 act3">&nbsp;</span>
+                <span class="ctrl2 act">&nbsp;</span>
                     <span class="ctrl2">&nbsp;</span>
                     <span class="ctrl2">&nbsp;</span>
             </div>
@@ -258,8 +259,8 @@
                 i = $(this).index();
                 i = -(i*$('.m_slide .slide > li').width());
                 $('.slide').animate({'left':i},500);
-                $('.ctrl').removeClass('act3');
-                $(this).addClass('act3');
+                $('.ctrl').removeClass('act');
+                $(this).addClass('act');
                 console.log(i);
             });
 
@@ -320,8 +321,8 @@
             c = -(c*$('.sale_product > li').width());
             console.log(c);
             $('.sale_product').animate({'left':c},500);
-            $('.sale_all div > .sc_btn').removeClass('act3');
-            $(this).addClass('act3');
+            $('.sale_all div > .sc_btn').removeClass('act');
+            $(this).addClass('act');
         });
         });
 

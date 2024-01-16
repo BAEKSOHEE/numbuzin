@@ -224,15 +224,17 @@
   main{
     line-height: 50px;
 }
-.act3{background: #FF5006;}
+  .act3{background: #FF5006 !important;}
 
 section h2{font-size: 1.6rem;}
 .m_banner{
     background: #FFF7B5;
-    width: 100%;}
+    width: 100%;
+    overflow: hidden;}
+
 .m_slide{
-  overflow: hidden;
   height: 40vh;}
+  
 .m_txt{
     font-size: 3rem;
     padding-left: 5%;
@@ -290,6 +292,8 @@ section h2{font-size: 1.6rem;}
   .new, .free{
       text-align: center;
   }
+  .free2{display: none;}
+
   .new img, .free img{width: 100%;}
   .sale{
       width: 100%;
