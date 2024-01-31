@@ -21,9 +21,9 @@
     <!-- 제이쿼리 라이브러리 연결하기 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <!-- 파비콘 이미지 삽입하기 -->
-    <link href="./images/DkY05v1i.ico" type="image/x-icon" rel="shortcut icon">
-    <!-- 슬라이드 스크립트 -->
-    <!-- <script src="./script/script.js" defer></script> -->
+    <link href="./images/ekbjl2KV.ico" type="image/x-icon" rel="shortcut icon">
+    <!-- 제이쿼리 스크립트 -->
+    <script src="./script/main.js" defer></script>
 </head>
 <body>
     <!-- 헤더영역 -->
@@ -142,49 +142,40 @@
                             <li><a href="#" title="제품5"><img src="./images/m_p_08.png" alt="제품5"></a></li>
                             <li><a href="#" title="제품5"><img src="./images/m_p_10.png" alt="제품5"></a></li>
                             <li><a href="#" title="제품5"><img src="./images/m_p_01.png" alt="제품5"></a></li>
-                            
                         </ul>
-                            <div class="ctrl_all">
-                                <span class="ctrl act">&nbsp;</span>
-                                <span class="ctrl">&nbsp;</span>
-                                <span class="ctrl">&nbsp;</span>
-                                <span class="ctrl">&nbsp;</span>
-                                <span class="ctrl">&nbsp;</span>
-                                <span class="ctrl">&nbsp;</span>
-                                <span class="ctrl">&nbsp;</span>
-                                <span class="ctrl">&nbsp;</span>
-                                </div>
-                        </div>
-                        
+                    </div>
+                    <i class="fa-solid fa-backward-step"></i>
+                    <i class="fa-solid fa-forward-step"></i>
                 </div>
             </div>
         </section>
 
         <section class="new">
             <h2>NEW</h2>
-            <a href="#" title="new" class="new1"><img src="./images/product_01-1-1.png" alt="신상품"></a>
-            <a href="#" title="new" class="new2"><img src="./images/product_01-1-2.png" alt="신상품"></a>
+            <a href="#" title="new" class="new1"><img src="./images/product_01-1-1.png" alt="신상품" id="banner_img"></a>
+            <a href="#" title="new" class="new2"><img src="./images/product_01-2.png" alt="신상품"></a>
         </section>
 
         <section class="sale">
             <h2>SALE</h2>
             <div class="sale_all">
-            <ul class="sale_product">
-                <li class="p_01"><a href="#" title="세일상품1"><img src="./images/sale_01.png" alt="세일상품1"></a></li>
-                <li class="p_02"><a href="#" title="세일상품2"><img src="./images/sale_02.png" alt="세일상품2"></a></li>
-                <li class="p_03"><a href="#" title="세일상품3"><img src="./images/sale_03.png" alt="세일상품3"></a></li>
-                <li class="p_04"><a href="#" title="세일상품4"><img src="./images/sale_04.png" alt="세일상품4"></a></li>
-                <li class="p_05"><a href="#" title="세일상품5"><img src="./images/sale_05.png" alt="세일상품5"></a></li>
-                <li  class="p_06"><a href="#" title="세일상품6"><img src="./images/sale_06.png" alt="세일상품6"></a></li>
-            </ul>
-            <div class="ctrl2_all">
-                <span class="ctrl2 act">&nbsp;</span>
-                    <span class="ctrl2">&nbsp;</span>
-                    <span class="ctrl2">&nbsp;</span>
-                    <span class="ctrl2">&nbsp;</span>
-                    <span class="ctrl2">&nbsp;</span>
-                    <span class="ctrl2">&nbsp;</span>
-            </div>
+                <ul class="sale_product">
+                    <li class="p_01"><a href="#" title="세일상품1"><img src="./images/sale_01.png" alt="세일상품1"></a></li>
+                    <li class="p_02"><a href="#" title="세일상품2"><img src="./images/sale_02.png" alt="세일상품2"></a></li>
+                    <li class="p_03"><a href="#" title="세일상품3"><img src="./images/sale_03.png" alt="세일상품3"></a></li>
+                    <li class="p_04"><a href="#" title="세일상품4"><img src="./images/sale_04.png" alt="세일상품4"></a></li>
+                    <li class="p_05"><a href="#" title="세일상품5"><img src="./images/sale_05.png" alt="세일상품5"></a></li>
+                    <li  class="p_06"><a href="#" title="세일상품6"><img src="./images/sale_06.png" alt="세일상품6"></a></li>
+                </ul>
+                <div>
+                    <span class="c_btn act1">&nbsp;</span>
+                    <span class="c_btn">&nbsp;</span>
+                    <span class="c_btn">&nbsp;</span>
+                    <span class="c_btn">&nbsp;</span>
+                    <span class="c_btn">&nbsp;</span>
+                    <span class="c_btn">&nbsp;</span>
+                </div>
+
             </div>
         </section>
         
@@ -201,12 +192,12 @@
                 <li><a href="#" title="이벤트1"><img src="./images/event_01.png" alt="이벤트1"></a></li>
                 <li><a href="#" title="이벤트2"><img src="./images/event_02.png" alt="이벤트2"></a></li>
                 <li><a href="#" title="이벤트3"><img src="./images/event_03.png" alt="이벤트3"></a></li>
-            </ul>
-            </div>
-            <div class="ctrl3_all">
-                <span class="ctrl2 act">&nbsp;</span>
-                    <span class="ctrl2">&nbsp;</span>
-                    <span class="ctrl2">&nbsp;</span>
+                </ul>
+                <div>
+                    <span class="c_btn1 act1">&nbsp;</span>
+                    <span class="c_btn1">&nbsp;</span>
+                    <span class="c_btn1">&nbsp;</span>
+                </div>
             </div>
         </section>
 
@@ -234,102 +225,6 @@
         </div>
     </footer>
 
-    <!-- 검색 모달창 스크립트 -->
-    <script>
-    $('.search .field input[type=search]').focus(function(){
-        $(this).parent().next().css('display', 'block')
-    }).blur(function(){
-        $(this).parent().next().css('display', 'none')
-    });
-    $('.o_search').click(function(){
-        $('.search_modal').addClass('active')
-    });
-    $('.c_search, section').click(function(){
-        $('.search_modal').removeClass('active')
-    });
-    </script>
-
-    <!-- 메인배너 스크립트 -->
-    <script>
-        $(document).ready(function(){
-            let i=0;
-            const ctrl = $('.swiper-slide > .ctrl_all > .ctrl')
-
-            ctrl.click(function(){
-                i = $(this).index();
-                i = -(i*$('.m_slide .slide > li').width());
-                $('.slide').animate({'left':i},500);
-                $('.ctrl').removeClass('act');
-                $(this).addClass('act');
-                console.log(i);
-            });
-
-            function main_slide(){
-                if(i==8){
-                    i=0;
-                }else{
-                    i++;
-                }
-                i = -(i*$('.m_slide .slide > li').width());
-                // $('.slide').animate({'left':i},500);
-                // $('.ctrl').removeClass('act');
-                // $(this).addClass('act');
-                // console.log(i);
-            }
-
-            let Timer = setInterval(main_slide, 1000);
-
-        });
-
-    </script>
-
-    <!-- 아코디언 메뉴 스크립트 -->
-    <script>
-        $(document).ready(function(){
-            const mnu = $('.gnb > ul > li > a');
-
-            mnu.click(function(){
-                $('.sub').slideUp();
-                $(this).next().slideDown();
-                $('i').removeClass('act');
-                $(this).find('i').addClass('act');
-            });
-        });
-
-    </script>
-
-    <!-- gnb 메뉴 스크립트 -->
-    <script>
-            $('.t_btn').click(function(){
-                $('.gnb').css('display','block');
-            });
-            $('.c_btn').click(function(){
-                $('.gnb').css('display','none');
-            });
-            
-    </script>
-
-    <!-- 세일 콘트롤 버튼 스크립트 -->
-    <script>
-    $(document).ready(function(){
-        let c=0;
-        const scbtn = $('.sale_all > .sc_btn_all > .sc_btn');
-
-        scbtn.click(function(){
-            c = $(this).index();
-            console.log(c);
-            c = -(c*$('.sale_product > li').width());
-            console.log(c);
-            $('.sale_product').animate({'left':c},500);
-            $('.sale_all div > .sc_btn').removeClass('act');
-            $(this).addClass('act');
-        });
-        });
-
-
-
     
-</script>
-
 </body>
 </html>
