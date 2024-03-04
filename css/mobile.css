@@ -30,7 +30,7 @@
 
  /* h_bottom 서식 */
  .h_bottom { } 
- .gnb { width: 100%; height: 100%; position: fixed; left: 0%; top: 0px; z-index: 9000; background: rgba(0,0,0,.5); transition: 0.5s; display: none; } 
+ .gnb { width: 100%; height: 100%; position: fixed; left: 0%; top: 0px; z-index: 9999; background: rgba(0,0,0,.5); transition: 0.5s; display: none; } 
  
  
  .gnb > ul { width: 80%; height: 100%; float: left; padding: 70px 1.2%; background-color: #fff; } 
@@ -38,10 +38,10 @@
  .gnb > ul > li > a { color:#fff; line-height:280%; display:block; width: 100%; background-color: #FAA200; } 
 
  
- .gnb > ul > li > a > i.fa-angle-down { font-size:1.1rem; position: absolute; right: 20%; padding-top: 1.5%; } 
+ .gnb > ul > li > a > i.fa-angle-down { font-size:1.1rem; position: absolute; right: 23%; padding-top: 1.5%; } 
  .act { transform: rotate(180deg) translateX(-20px) !important; } 
  
- .sub { display:none; display: block; background-color: #FFF7B5; } 
+ .sub { display:none; background-color: #FFF7B5; } 
  
  /* 검색모달창 */
  .search_modal { background-color: #FF5006; position: fixed; top: 0px; left: 0px; width: 100%; height: 230px; z-index: 9999; display: flex; justify-content: center; align-items: center; top: -300px; transition: 0.35s; } 
@@ -102,17 +102,23 @@
 
  .sale { width: 100%; height: 470px; text-align: center; background: #DAF6FF;}
  .sale_all { /* DIV */
- position: relative; width: 100%; height: 500px; overflow: hidden; } 
- .sale_product { /* UL */
- display: flex; position: absolute; width: 2940px; } 
- 
+ position: relative; width: 100%; height: 500px; overflow: hidden;  display: flex; position: absolute; width: 2940px;} 
+.sale figure{width: 762px;}
+ .sale figure img { width:100%; height: 230px; display: block; transition: 0.2s; } 
+.sale figure img:hover { filter: brightness(1.1); transform: scale(1.01); } 
+.sale figure a:hover{text-decoration: none;}
 
- .sale_product > li, .event_product > li { width: 490px; height: 398px; } 
- .sale_product img { width: 100%; } 
- 
+ .sale_product > .sale_all, .event_product > li { width: 490px; height: 398px; } 
+ .sale_product img { width: 100%; }
 
- .c_btn, .c_btn1 { width: 18px; height: 18px; background: #fff; display: inline-block; border-radius: 50%; } 
- .c_btn { transform: translateY(430px); } 
+ .sale figcaption{padding-left: 5px; text-align: left; line-height: 30px; background-color: #fff;}
+.sale figcaption p:first-child{font-weight: bold; font-size: 20px;}
+.sale figcaption p:nth-child(2){font-weight: bold;}
+.sale figcaption p:nth-child(3){font-weight: bold; font-size: 14px; color: #a3a3a3;}
+.point{color: rgb(255, 217, 3); font-size: 20px;}
+ .c_btn { position: absolute; right: 4%; top: 2%; padding: 6px; z-index: 10000; color: #fff; font-size: 2rem; cursor: pointer; } 
+
+ .c_btn1 { width: 18px; height: 18px; background: #fff; display: inline-block; border-radius: 50%; } 
 
  .c_btn1 { transform: translateY(490px); } 
 
@@ -121,11 +127,11 @@
  
 
 
- .event { width: 100%; height: 530px; text-align: center; background: #FFF0D9; } 
+ .event { width: 100%; height: 530px; text-align: center; background: #DCFFDD; } 
  .event_all { position: relative; width: 100%; height: 530px; overflow: hidden; } 
  .event_product { display: flex; position: absolute; width: 1470px; } 
 
- .event_product li img { width: 490px; height: 470px; } 
+ .event_product li img { width: 450px; height: 470px; } 
  .event_product img { width: 100%; } 
 
  .none { display: none; } 
@@ -133,7 +139,7 @@
  
 
  /* 탑버튼 */
- #top { background: #000; border-radius: 50%; color: #fff; font-size: 1.3rem; padding: 10px; position: fixed; bottom: 5%; right: 40px; text-decoration: none; width: 40px; height: 40px; text-align: center; line-height: 40px; z-index: 9999; } 
+ #top { background: #000; border-radius: 50%; color: #fff; font-size: 1.3rem; padding: 10px; position: fixed; bottom: 5%; right: 40px; text-decoration: none; width: 40px; height: 40px; text-align: center; line-height: 40px; z-index: 100; } 
  
  /* 푸터서식 */
  footer { background: #333; color: #fff; font-size: 0.7rem; height: 210px; padding: 30px 20px; line-height: 20px; position: relative; } 
@@ -147,4 +153,9 @@
  #kakao img { width: 25px; } 
  #insta, #youtube, #kakao { padding-left: 20px; } 
  }
+
+ @media screen and (min-width:500px) and (max-width:766px) {
+
+}
+
  

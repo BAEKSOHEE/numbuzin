@@ -31,7 +31,7 @@ $(document).ready(function(){
     // 메인 우측버튼 함수
     function moveRight(){
         m_slide.animate({'margin-left':'0px'},function(){
-            $('.swiper-slide > .slide > li:last-child').insertAfter('.swiper-slide > .slide > li:first-child');
+            $('.swiper-slide > .slide > li:last-child').insertBefore('.swiper-slide > .slide > li:first-child');
             m_slide.css('margin-left','-200px');
         });
     }
@@ -48,15 +48,43 @@ $(document).ready(function(){
         moveRight();
     });
 
+    $('.swiper-wrapper i.fa-backward-step, .swiper-wrapper i.fa-forward-step').mouseleave(function(){
+        clearInterval(Timer);
+        Timer=setInterval(moveLeft,3000)
+    });
+
     // 아코디언 메뉴 스크립트
     const mnu = $('.gnb > ul > li > a');
 
-            mnu.click(function(){
-                $('.sub').slideUp();
-                $(this).next().slideDown();
-                $('i').removeClass('act');
-                $(this).find('i').addClass('act');
-            });
+
+    let w_size = $(window).width(); //윈도우 가로크기 값
+
+    if(w_size<1025){
+        mnu.click(function(){
+            $('.sub').slideUp();
+            $(this).next().slideDown();
+            $('i').removeClass('act');
+            $(this).find('i').addClass('act');
+        });
+    }
+
+    // // pc버전은 아코디언 메뉴 스크립트 막기
+    // $(window).resize(function(){
+    //     if(w_size >= 1025){
+    //         // location.reload();
+    //         $('.gnb ul > li > a').click(function(){
+    //             return false; //클릭하지 못하게 막는다.
+    //         });
+    //     };
+    // });
+
+    // if(w_size >= 1025){
+    //     // location.reload();
+    //         $('.gnb ul > li > a').click(function(){
+    //         return false;
+    //     });
+    // }
+
 
     // gnb 메뉴 스크립트
     $('.t_btn').click(function(){
@@ -147,6 +175,14 @@ $(document).ready(function(){
         mslide1(n1);    
     },5000);
 
+    // 피부상담 마우스 오버시
+    const free = $('.free > a > .free1');
+    free.mouseenter(function(){
+        $(this).attr("src","images/counselor_hover.jpg");
+    free.mouseleave(function(){
+        $(this).attr("src","images/counselor.jpg");
+        });
+    });
 
 });
 
@@ -168,3 +204,4 @@ $('.c_search, section').click(function(){
 //랜덤배너
 let ran_n = Math.ceil(Math.random()*2);
 document.getElementById('banner_img').src="./images/product_01-1-"+ran_n+".png";
+

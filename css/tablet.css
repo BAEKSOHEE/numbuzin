@@ -40,7 +40,7 @@
  .gnb > ul > li > a > i.fa-angle-down { font-size:1.1rem; position: absolute; right: 20%; padding-top: 1.5%; } 
  .act { transform: rotate(180deg) translateX(-20px) !important; } 
 
- .sub { display:none; display: block; background-color: #FFF7B5; } 
+ .sub { display:none; background-color: #FFF7B5; } 
 
  .c_btn { position: absolute; right: 4%; top: 2%; padding: 6px; z-index: 10000; color: #fff; font-size: 2rem; cursor: pointer; } 
 
@@ -88,7 +88,7 @@ section h2 { font-size: 1.6rem; }
 .swiper-wrapper { display: flex; width: 100%; overflow:hidden; } 
 
  .swiper-wrapper .fa-solid { z-index: 1000; font-size: 2rem; position: absolute; top: 570px; color: #333; cursor: pointer; } 
-.fa-backward-step { right: 15%; } 
+.fa-backward-step { right: 18%; } 
 .fa-forward-step { right: 12%; } 
 
 .swiper-slide { top: 6px; width: 100%; height: 40vh; left: 44%; position: relative; overflow: hidden; } 
@@ -110,13 +110,15 @@ section h2 { font-size: 1.6rem; }
  .new img, .free img { width: 100%; } 
  .sale { width: 100%; text-align: center; background: #DAF6FF; } 
  .sale_product { width: 100%; margin: 0px auto; } 
- .sale ul { display: grid; grid-gap:20px; grid-template-rows: 390px 390px; grid-template-areas:
+ .sale_all{ display: grid; grid-gap:20px; grid-template-rows: 390px 390px; grid-template-areas:
  "p_01 p_02"
  "p_03 p_04"
  "p_05 p_06"
 ; } 
- .sale ul img { width: 100%; display: block; transition: 0.2s; } 
- .sale ul img:hover { filter: brightness(1.1); transform: scale(1.01); } 
+ .sale figure img { width: 100%; display: block; transition: 0.2s; } 
+ .sale figure img:hover { filter: brightness(1.1); transform: scale(1.01); } 
+ .sale figure a:hover{text-decoration: none;}
+
  .sale .p_01 { grid-area: p_01; } 
  .sale .p_02 { grid-area: p_02; } 
  .sale .p_03 { grid-area: p_03; } 
@@ -125,7 +127,14 @@ section h2 { font-size: 1.6rem; }
  .sale .p_06 { grid-area: p_06; } 
  .ctrl2_all { display: none; } 
 
- .event { width: 100%; text-align: center; background: #FFF0D9; }
+ .sale figcaption{padding-left: 5px; text-align: left; line-height: 30px; background-color: #fff;}
+ .sale figcaption p:first-child{font-weight: bold; font-size: 20px;}
+ .sale figcaption p:nth-child(2){font-weight: bold;}
+ .sale figcaption p:nth-child(3){font-weight: bold; font-size: 14px; color: #a3a3a3;}
+ .point{color: rgb(255, 217, 3); font-size: 20px;}
+
+
+ .event { width: 100%; text-align: center; background: #DCFFDD; }
  .ctrl3_all { display: none; } 
  .event_product { display: flex; justify-content: space-around; width: 100%; margin: 0px auto; } 
 
