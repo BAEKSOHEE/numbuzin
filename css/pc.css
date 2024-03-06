@@ -1,29 +1,31 @@
 @charset "utf-8";
-/* PC해상도일때 적용되는 서식 */
-@media screen and (min-width:1025px) {
-.h_top, .gnb > ul, .f_txt { width: 1200px; margin: 0px auto; } 
 
-.c_btn, .t_btn { display:none; } 
+/* PC해상도일때 적용되는 서식 */
+
+@media screen and (min-width:1025px) {
+.h_top, .gnb1 > ul, .f_txt { width: 1200px; margin: 0px auto; } 
+
+.x_btn, .t_btn { display:none; } 
 
 header { width: 100%; height: 170px; position: absolute; z-index: 1000; background: #fff; } 
 .h_top { width: 100%; position: relative; } 
 .h_top h1 { position: absolute; left: 50%; top: 45px; transform: translateX(-50%); } 
 .h_top h1 img { width: 210px; text-align: center; } 
 .t_btn { left:auto; right:5px; top:110px; font-size:2rem; } 
-.c_btn { font-size: 2rem; } 
+.x_btn { font-size: 2rem; } 
 
 .h_top > .lnb { position: absolute; right: 0px; top: 50px; width: 300px; } 
 .lnb a { text-decoration: none; color: #000; padding-left: 10px; } 
- .o_search { color: #FF5006; } 
+ .o_search { color: #FF5006; font-size: 24px;} 
  
 .lnb i.fa-regular { display: none; } 
 
 .h_top > .lnb > ul { flex-wrap: nowrap; } 
 .h_top > .lnb > ul >li { background:none; } 
 /* 검색모달창 */
-.search_modal { background-color: rgba(0,0,0,.7); position: fixed; top: 0px; left: 0px; width: 100%; height: 100px; z-index: 9999; display: flex; justify-content: center; align-items: center; top: -300px; transition: 0.35s; } 
-.search_modal.active { top: 0; } 
-.c_search { position: absolute; right: 180px; top: 30px; color: #fff; font-size: 2rem; cursor: pointer; } 
+.search_modal { background-color: rgba(0,0,0,.7); position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 9999; display: flex; justify-content: center; align-items: center; transition: 0.35s; top:-1000px} 
+.search_modal.active { top: 0px; } 
+.c_search { position: absolute; right: 30%; top: 30%; color: #fff; font-size: 2rem; cursor: pointer; } 
 .search { width: 500px; } 
 .search > .field { display: flex; position: relative; } 
 .search > .field:before { content: '\e97a'; font-family:"xeicon"; position: absolute; color: #000; left: 15px; top: 50%; transform: translateY(-50%); font-size: 1.5em; } 
@@ -39,17 +41,19 @@ header { width: 100%; height: 170px; position: absolute; z-index: 1000; backgrou
 .hashtag { padding-top: 10px; font-size: 15px; color: #fff; display: none; } 
 
 
-.h_bottom { width: 100%; height: 50px; position: absolute; top: 120px; left: 0px; overflow: hidden; transition: 0.5s; background: rgba(255,255,255,.8);}
+.h_bottom { width: 100%; height: 50px; position: absolute; top: 120px; left: 0px; overflow: hidden; transition: 0.5s; background: rgba(255,255,255,.8); display: block !important;}
 .h_bottom:hover { height: 400px; } 
-.gnb { position: static; width: 100%; height: 60px; left: 0px; top: 0px; background: rgba(255,255,255,.8); border-top: 2px solid #ccc; } 
-.gnb a { text-decoration: none; color: #000; } 
-.gnb > ul { transform: translateY(10px); padding: 0px 20px; line-height: 32px; display: flex; justify-content: space-around; } 
-.gnb > ul > li { padding: 0px 30px; border:none; position:relative;}
-.gnb > ul > li:first-child::after, .gnb > ul > li:last-child::after {display: block;content: "";width: 500px;height: 400px;position: absolute;background:rgba(255,255,255,.8);}
-.gnb > ul > li:first-child::after { left: -400px; } 
-.gnb > ul > li:last-child::after { left: 5px; } 
 
-.gnb > ul > li:nth-child(5)::after, .gnb > ul > li:nth-child(6)::after, .gnb > ul > li:nth-child(7)::after {display: block;content: "";width: 150px;height: 400px;background: rgba(255,255,255,.8);position: absolute;left: 1px; } 
+.gnb1 { position: static; width: 100%; height: 60px; left: 0px; top: 0px; background: rgba(255,255,255,.8); border-top: 2px solid #ccc;}
+.gnb2{display:none;} 
+.gnb1 a { text-decoration: none; color: #000; } 
+.gnb1 > ul { transform: translateY(10px); padding: 0px 20px; line-height: 32px; display: flex; justify-content: space-around; } 
+.gnb1 > ul > li { padding: 0px 30px; border:none; position:relative;}
+.gnb1 > ul > li:first-child::after, .gnb > ul > li:last-child::after {display: block;content: "";width: 500px;height: 400px;position: absolute;background:rgba(255,255,255,.8);}
+.gnb1 > ul > li:first-child::after { left: -400px; } 
+.gnb1 > ul > li:last-child::after { left: 5px; } 
+
+.gnb1 > ul > li:nth-child(5)::after, .gnb > ul > li:nth-child(6)::after, .gnb > ul > li:nth-child(7)::after {display: block;content: "";width: 150px;height: 400px;background: rgba(255,255,255,.8);position: absolute;left: 1px; } 
 
 .h_bottom:hover { .sub { display: block; }} 
 
@@ -69,7 +73,7 @@ section h2 { font-size: 2.6rem; font-family: 'short stack';}
 #more { position: absolute; top: 490px; left: 20%; padding: 10px; background-color: #fff; border: 1px solid #333; font-weight: bold; } 
 #more:hover { background-color: #000; color: #fff; cursor: pointer; } 
 .swiper-wrapper { display: flex; width: 100%; overflow:hidden; position: relative; } 
-.swiper-wrapper .fa-solid { z-index: 1000; font-size: 2rem; position: absolute; top: 570px; color: #333; cursor: pointer; } 
+.swiper-wrapper .fa-solid { z-index: 10; font-size: 2rem; position: absolute; top: 570px; color: #333; cursor: pointer; } 
 .fa-backward-step { right: 16%; } 
 .fa-forward-step { right: 12%; } 
 .swiper-slide { top: 130px; height: 600px; left: 630px; width: 100%; overflow:hidden; position: relative; } 
@@ -122,7 +126,11 @@ section{padding-top: 50px;}
 .event img:hover { filter: brightness(1.05); } 
 .event_imgs { display: flex; justify-content: center; } 
 /* 탑버튼 */
-#top { background: #000; border-radius: 50%; color: #fff; font-size: 1.3rem; padding: 10px; position: fixed; bottom: 40px; right: 40px; text-decoration: none; width: 40px; height: 40px; text-align: center; line-height: 40px; z-index: 9999; } 
+#top { background: #000; border-radius: 50%; color: #fff; font-size: 1.3rem; padding: 10px; position: fixed; bottom: 40px; right: 40px; text-decoration: none; width: 40px; height: 40px; text-align: center; line-height: 40px; z-index: 9999; opacity: 0; } 
+.act2{
+    opacity: 1 !important;
+    visibility: visible !important;
+}
 
 /* 푸터서식 */
 footer { background: #333; color: #fff; font-size: 0.7rem; height: 210px; padding: 20px 0px; line-height: 20px; position: relative; } 
@@ -136,6 +144,7 @@ footer a { color: #fff; }
 #kakao img { width: 25px; } 
 #insta, #youtube, #kakao { padding-left: 20px; } 
 }
+
 @media screen and (min-width:1025px) and (max-width:1200px) {
 /* 세일 */
 .sale_all{width: 100%}
@@ -146,5 +155,3 @@ footer a { color: #fff; }
 .event_product{width: 100%;}
 .event img {width: 90%; padding-right: 10%;}
 }
-
-

@@ -54,29 +54,96 @@ $(document).ready(function(){
     });
 
     // 아코디언 메뉴 스크립트
-    const mnu = $('.gnb > ul > li > a');
+    const mnu = $('.gnb2 > ul > li');
+
+//     let msub1 = `
+//         <ul class="sub">
+//         <li><a href="#" title="스킨/토너">스킨/토너</a></li>
+//         <li><a href="#" title="로션/에멀젼">로션/에멀젼</a></li>
+//         <li><a href="#" title="에센스">에센스</a></li>
+//         <li><a href="#" title="세럼">세럼</a></li>
+//         <li><a href="#" title="앰플">앰플</a></li>
+//         <li><a href="#" title="크림">크림</a></li>
+//         <li><a href="#" title="오일">오일</a></li>
+//         <li><a href="#" title="미스트">미스트</a></li>
+//         <li><a href="#" title="패드">패드</a></li>
+//     </ul>
+//     `;
+//     let msub2 = ` <ul class="sub">
+//         <li><a href="#" title="선크림">선크림</a></li>
+//         <li><a href="#" title="선블록">선블록</a></li>
+//     </ul>`;
+
+//     let msub3 = `<ul class="sub">
+//     <li><a href="#" title="진정팩">진정팩</a></li>
+//     <li><a href="#" title="미백팩">미백팩</a></li>
+//     <li><a href="#" title="세럼팩">세럼팩</a></li>
+//     <li><a href="#" title="쿨링팩">쿨링팩</a></li>
+// </ul>`;
+
+//     let msub4 = `<ul class="sub">
+//     <li><a href="#" title="클렌징폼">클렌징폼</a></li>
+//     <li><a href="#" title="클렌징오일">클렌징오일</a></li>
+//     <li><a href="#" title="클렌징워터">클렌징워터</a></li>
+//     <li><a href="#" title="클렌징밀크">클렌징밀크</a></li>
+//     <li><a href="#" title="클렌징크림">클렌징크림</a></li>
+//     <li><a href="#" title="클렌징밤">클렌징밤</a></li>
+//     <li><a href="#" title="스크럽">스크럽</a></li>
+//     <li><a href="#" title="필링">필링</a></li>
+// </ul>`;
+
+//     let msub5 =`<ul class="sub">
+//     <li><a href="./" title="자주묻는질문">자주묻는질문</a></li>
+//     <li><a href="#" title="회원/멤버십">회원/멤버십</a></li>
+//     <li><a href="#" title="1:1문의">1:1문의</a></li>
+//     <li><a href="#" title="공지사항">공지사항</a></li>
+// </ul>`;
 
 
-    let w_size = $(window).width(); //윈도우 가로크기 값
+    // 브라우저 윈도우 세로스크롤 값을 사용하여 top 버튼 나오고 숨기고 하기
 
-    if(w_size<1025){
-        mnu.click(function(){
-            $('.sub').slideUp();
-            $(this).next().slideDown();
-            $('i').removeClass('act');
-            $(this).find('i').addClass('act');
+    let scrollNT;
+    const T_btn = document.querySelector('#top');
+
+    window.addEventListener('scroll', function(){
+        scrollNT = this.pageYOffset;
+        // console.log(scrollNT); //700
+        if(scrollNT>=700){
+            T_btn.classList.add('act2');
+        }else{
+            T_btn.classList.remove('act2');
+        }
+    });
+
+
+
+
+//     let w_size = $(window).width(); //윈도우 가로크기 값
+
+//     if(w_size<1025){
+        mnu.click(function(){          
+            $(this).find('a').next().slideToggle();
+            //$('.gnb ul li a i').removeClass('act');
+            $(this).find('i').toggleClass('act');
+            $('.h_bottom').show();
         });
-    }
+        
+//     }
 
     // // pc버전은 아코디언 메뉴 스크립트 막기
-    // $(window).resize(function(){
-    //     if(w_size >= 1025){
-    //         // location.reload();
-    //         $('.gnb ul > li > a').click(function(){
-    //             return false; //클릭하지 못하게 막는다.
-    //         });
-    //     };
-    // });
+    //$(window).resize(function(){
+        // if(w_size >= 1025){
+        //     $('.gnb').css('display','block');
+        // };
+
+        // gnb 메뉴 스크립트
+        $('.t_btn').click(function(){
+            $('.gnb2, .h_bottom').show();
+        });
+        $('.x_btn').click(function(){
+            $('.gnb2, .h_bottom').hide();
+        });
+    //});
 
     // if(w_size >= 1025){
     //     // location.reload();
@@ -85,14 +152,6 @@ $(document).ready(function(){
     //     });
     // }
 
-
-    // gnb 메뉴 스크립트
-    $('.t_btn').click(function(){
-        $('.gnb').css('display','block');
-    });
-    $('.c_btn').click(function(){
-        $('.gnb').css('display','none');
-    });
 
     let c=0;
     const scbtn = $('.sale_all > .sc_btn_all > .sc_btn');
@@ -109,34 +168,34 @@ $(document).ready(function(){
 
     // 콘트롤버튼(sale)
     let k=0;
-    const cbtn = $('.sale_all div > .c_btn');
+    const cbtn = $('.sale .c_all .c_btn');
 
     cbtn.click(function(){
         k = $(this).index();
         console.log(k);
-        k = -(k*$('.sale_product li').width());
+        k = -(k*$('.sale_all figure').outerWidth());
         console.log(k);
 
-        $('.sale_product').animate({'left':k},500);
+        $('.sale_all').animate({'left':k},500);
 
-        $('.sale_all div span').removeClass('act1');
+        $('.sale .c_all span').removeClass('act1');
         $(this).addClass('act1');
     });
 
     function mslide(n){
-        n = -(n*$('.sale_product li').width());
-        $('.sale_product').animate({'left':n},500);
+        n = -(n*$('.sale_all figure').outerWidth());
+        $('.sale_all').animate({'left':n},500);
     }
     let n = 0;
     let Timer1 = setInterval(function(){
         if(n==3){
             n=0;
-            $('.sale_all div span').removeClass('act1');
-            $('.sale_all div span').eq(n).addClass('act1');
+            $('.sale .c_all span').removeClass('act1');
+            $('.sale .c_all span').eq(n).addClass('act1');
         }else{
             n++;
-            $('.sale_all div span').removeClass('act1');
-            $('.sale_all div span').eq(n).addClass('act1');
+            $('.sale .c_all span').removeClass('act1');
+            $('.sale .c_all span').eq(n).addClass('act1');
         }
         mslide(n);    
     },5000);
