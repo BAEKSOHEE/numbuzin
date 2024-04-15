@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>넘버즈인 홈페이지</title>
+    <!-- 초기화 -->
+    <link rel="stylesheet" href="./css/reset.css" title="text/css">
+    <!-- 공통서식(글꼴, 크기, 색상, 링크) -->
+    <link rel="stylesheet" href="./css/base.css" title="text/css">
+    <!-- pc해상도에 맞는 서식 -->
+    <link href="./css/pc.css" rel="stylesheet" type="text/css">
+    <!-- tablet해상도에 맞는 서식 -->
+    <link href="./css/tablet.css" rel="stylesheet" type="text/css">
+    <!-- mobile해상도에 맞는 서식 -->
+    <link href="./css/mobile.css" rel="stylesheet" type="text/css">
+    <!-- 폰트어썸 아이콘폰트 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- xe아이콘폰트 -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- 제이쿼리 라이브러리 연결하기 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- 파비콘 이미지 삽입하기 -->
+    <link href="./images/ekbjl2KV.ico" type="image/x-icon" rel="shortcut icon">
+    
+</head>
+<body>
+    <!-- 헤더영역 -->
+    <header>
+        <div class="h_top">
+            <h1>
+                <a href="index.html" title="메인페이지로 이동"><img src="./images/logo.png" alt="상단로고"></a>
+            </h1>
+
+        <nav class="lnb">
+            <a href="login.html" title="로그인">
+                <i class="fa-regular fa-user"></i>
+                <span class="lj_txt">로그인</span></a></li>
+            <a href="join.html" title="회원가입">
+                <span class="lj_txt">회원가입</span></a></li>
+            <a href="#" title="검색" id="search"><i class="o_search fa-solid fa-magnifying-glass"></i></a>
+        </nav>
+        </div>
+        <div class="search_modal">
+            <i class="c_search fa-solid fa-xmark"></i>
+            <div class="search">
+                <div class="field">
+                    <input type="search" placeholder="검색어를 입력하세요.">
+
+                    <input type="button" value="검색">
+                </div>
+                <p class="hashtag">
+                    #모공개선 #탄력 #결케어 #보습 #주름개선 #홍조커버
+                </p>
+            </div>
+        </div>
+
+        <label for="toggle" class="t_btn">
+            <i class="fas fa-bars"></i>
+        </label>
+
+        <!-- 메인 내비게이션 -->
+        <div class="h_bottom">
+            <!-- PC버전 GNB -->
+            <nav class="gnb1">
+                <label for="toggle" class="x_btn"><i class="fa-solid fa-circle-xmark"></i></label>
+                <ul>
+                    <li><a href="#" title="스킨케어">스킨케어 <i class="fas fa-angle-down"></i></a>
+                        <ul class="sub">
+                            <li><a href="#" title="스킨/토너">스킨/토너</a></li>
+                            <li><a href="#" title="로션/에멀젼">로션/에멀젼</a></li>
+                            <li><a href="#" title="에센스">에센스</a></li>
+                            <li><a href="#" title="세럼">세럼</a></li>
+                            <li><a href="#" title="앰플">앰플</a></li>
+                            <li><a href="#" title="크림">크림</a></li>
+                            <li><a href="#" title="오일">오일</a></li>
+                            <li><a href="#" title="미스트">미스트</a></li>
+                            <li><a href="#" title="패드">패드</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#" title="선케어">선케어 <i class="fas fa-angle-down"></i></a>
+                        <ul class="sub">
+                            <li><a href="#" title="선크림">선크림</a></li>
+                            <li><a href="#" title="선블록">선블록</a></li>
+                        </ul>
+                    </li>
+                        
+                    <li><a href="#" title="마스크팩">마스크팩 <i class="fas fa-angle-down"></i></a>
+                        <ul class="sub">
+                            <li><a href="#" title="진정팩">진정팩</a></li>
+                            <li><a href="#" title="미백팩">미백팩</a></li>
+                            <li><a href="#" title="세럼팩">세럼팩</a></li>
+                            <li><a href="#" title="쿨링팩">쿨링팩</a></li>
+                        </ul>
+                    </li>
+                        
+                    <li><a href="#" title="클렌징">클렌징 <i class="fas fa-angle-down"></i></a>
+                        <ul class="sub">
+                            <li><a href="#" title="클렌징폼">클렌징폼</a></li>
+                            <li><a href="#" title="클렌징오일">클렌징오일</a></li>
+                            <li><a href="#" title="클렌징워터">클렌징워터</a></li>
+                            <li><a href="#" title="클렌징밀크">클렌징밀크</a></li>
+                            <li><a href="#" title="클렌징크림">클렌징크림</a></li>
+                            <li><a href="#" title="클렌징밤">클렌징밤</a></li>
+                            <li><a href="#" title="스크럽">스크럽</a></li>
+                            <li><a href="#" title="필링">필링</a></li>
+                        </ul>
+                    </li>
+                    
+                <li><a href="reveiw.html" title="후기">후기</a></li>
+                <li><a href="event.html" title="이벤트">이벤트</a></li>
+                <li><a href="counseling.html" title="피부상담">피부상담</a></li>
+                <li><a href="#" title="고객센터">고객센터 <i class="fas fa-angle-down"></i></a>
+                    <ul class="sub">
+                        <li><a href="./" title="자주묻는질문">자주묻는질문</a></li>
+                        <li><a href="#" title="회원/멤버십">회원/멤버십</a></li>
+                        <li><a href="#" title="1:1문의">1:1문의</a></li>
+                        <li><a href="#" title="공지사항">공지사항</a></li>
+                    </ul>
+                </li>
+            </nav>
+            <!-- MO, TA버전 GNB -->
+            <nav class="gnb2">
+                <label for="toggle" class="x_btn"><i class="fa-solid fa-circle-xmark"></i></label>
+                <ul>
+                    <li><a href="#" title="스킨케어">스킨케어 <i class="fas fa-angle-down"></i></a>
+                        <ul class="sub">
+                            <li><a href="#" title="스킨/토너">스킨/토너</a></li>
+                            <li><a href="#" title="로션/에멀젼">로션/에멀젼</a></li>
+                            <li><a href="#" title="에센스">에센스</a></li>
+                            <li><a href="#" title="세럼">세럼</a></li>
+                            <li><a href="#" title="앰플">앰플</a></li>
+                            <li><a href="#" title="크림">크림</a></li>
+                            <li><a href="#" title="오일">오일</a></li>
+                            <li><a href="#" title="미스트">미스트</a></li>
+                            <li><a href="#" title="패드">패드</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#" title="선케어">선케어 <i class="fas fa-angle-down"></i></a>
+                        <ul class="sub">
+                            <li><a href="#" title="선크림">선크림</a></li>
+                            <li><a href="#" title="선블록">선블록</a></li>
+                        </ul>
+                    </li>
+                        
+                    <li><a href="#" title="마스크팩">마스크팩 <i class="fas fa-angle-down"></i></a>
+                        <ul class="sub">
+                            <li><a href="#" title="진정팩">진정팩</a></li>
+                            <li><a href="#" title="미백팩">미백팩</a></li>
+                            <li><a href="#" title="세럼팩">세럼팩</a></li>
+                            <li><a href="#" title="쿨링팩">쿨링팩</a></li>
+                        </ul>
+                    </li>
+                        
+                    <li><a href="#" title="클렌징">클렌징 <i class="fas fa-angle-down"></i></a>
+                        <ul class="sub">
+                            <li><a href="#" title="클렌징폼">클렌징폼</a></li>
+                            <li><a href="#" title="클렌징오일">클렌징오일</a></li>
+                            <li><a href="#" title="클렌징워터">클렌징워터</a></li>
+                            <li><a href="#" title="클렌징밀크">클렌징밀크</a></li>
+                            <li><a href="#" title="클렌징크림">클렌징크림</a></li>
+                            <li><a href="#" title="클렌징밤">클렌징밤</a></li>
+                            <li><a href="#" title="스크럽">스크럽</a></li>
+                            <li><a href="#" title="필링">필링</a></li>
+                        </ul>
+                    </li>
+                    
+                <li><a href="reveiw.html" title="후기">후기</a></li>
+                <li><a href="event.html" title="이벤트">이벤트</a></li>
+                <li><a href="counseling.html" title="피부상담">피부상담</a></li>
+                <li><a href="#" title="고객센터">고객센터 <i class="fas fa-angle-down"></i></a>
+                    <ul class="sub">
+                        <li><a href="./" title="자주묻는질문">자주묻는질문</a></li>
+                        <li><a href="#" title="회원/멤버십">회원/멤버십</a></li>
+                        <li><a href="#" title="1:1문의">1:1문의</a></li>
+                        <li><a href="#" title="공지사항">공지사항</a></li>
+                    </ul>
+                </li>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 메인영역 -->
+    <main>
+        <section class="m_banner">
+            <h2>&nbsp;</h2>
+            <div class="m_slide">
+                <div class="swiper-wrapper">
+                    <p></p>
+                    <span class="m_txt">What's<br>Your Number?</span>
+                    <p><input type="button" value="내 번호 찾아보기!" id="more"></p>
+                    <div class="swiper-slide">
+                        <ul class="slide">
+                            <li><a href="#" title="제품1"><img src="./images/m_p_03.png" alt="제품1"></a></li>
+                            <li><a href="#" title="제품2"><img src="./images/m_p_07.png" alt="제품2"></a></li>
+                            <li><a href="#" title="제품3"><img src="./images/m_p_02.png" alt="제품3"></a></li>
+                            <li><a href="#" title="제품4"><img src="./images/m_p_09.png" alt="제품4"></a></li>
+                            <li><a href="#" title="제품5"><img src="./images/m_p_05.png" alt="제품5"></a></li>
+                            <li><a href="#" title="제품5"><img src="./images/m_p_08.png" alt="제품5"></a></li>
+                            <li><a href="#" title="제품5"><img src="./images/m_p_10.png" alt="제품5"></a></li>
+                            <li><a href="#" title="제품5"><img src="./images/m_p_01.png" alt="제품5"></a></li>
+                        </ul>
+                    </div>
+                    <i class="fa-solid fa-backward-step"></i>
+                    <i class="fa-solid fa-forward-step"></i>
+                </div>
+            </div>
+        </section>
+
+        <section class="new">
+            <h2>NEW</h2>
+            <a href="#" title="new" class="new1"><img src="./images/product_01-1-1.png" alt="신상품" id="banner_img"></a>
+            <a href="#" title="new" class="new2"><img src="./images/product_01-2.png" alt="신상품"></a>
+        </section>
+
+        <section class="sale">
+            <h2>SALE</h2>
+            <div class="sale_all">
+                    <figure class="p_01">
+                        <a href="#" title="세일상품1"><img src="./images/sale_01.png" alt="세일상품1">
+                            <figcaption>
+                                <p>숫자마스크팩 5종</p>
+                                <p><span class="point">1+1</span> 제품별 상세페이지 참고</p>
+                                <p>매끈결부터 수분광채까지 완벽 밀착 관리</p>
+                            </figcaption>
+                        </a>
+                    </figure>
+                    <figure class="p_02">
+                        <a href="#" title="세일상품2"><img src="./images/sale_02.png" alt="세일상품2">
+                            <figcaption>
+                                <p>숫자크림 5종</p>
+                                <p><span class="point">50%</span> 각 15,000원</p>
+                                <p>환절기 피부고민엔 넘버즈인 숫자크림</p>
+                            </figcaption>
+                        </a>
+                    </figure>
+                    <figure class="p_03">
+                        <a href="#" title="세일상품3"><img src="./images/sale_03.png" alt="세일상품3">
+                            <figcaption>
+                                <p>숫자집중케어 3종</p>
+                                <p><span class="point">최대 50%</span> 제품별 상세페이지 참고</p>
+                                <p>트러블, 모공, 흔적까지 확실하게 집중케어</p>
+                            </figcaption>
+                        </a>
+                    </figure>
+                    <figure class="p_04">
+                        <a href="#" title="세일상품4"><img src="./images/sale_04.png" alt="세일상품4">
+                            <figcaption>
+                                <p>숫자토너패드 4종</p>
+                                <p><span class="point">30%</span> 제품별 상세페이지 참고</p>
+                                <p>하루 1장 저자극 각질케어</p>
+                            </figcaption>
+                        </a>
+                    </figure>
+                    <figure class="p_05">
+                        <a href="#" title="세일상품5"><img src="./images/sale_05.png" alt="세일상품5">
+                            <figcaption>
+                                <p>숫자토너 3종</p>
+                                <p><span class="point">30%</span> 제품별 상세페이지 참고</p>
+                                <p>기초부터 튼튼하게, 데일리 수분케어</p>
+                            </figcaption>
+                        </a>
+                    </figure>
+                    <figure class="p_06">
+                        <a href="#" title="세일상품6"><img src="./images/sale_06.png" alt="세일상품6">
+                            <figcaption>
+                                <p>숫자세럼 9종</p>
+                                <p><span class="point">30%</span> 각21,000원</p>
+                                <p>리뷰가 증명하는 피부고민 맞춤 세럼</p>
+                            </figcaption>
+                        </a>
+                    </figure>
+            </div>
+            <div class="c_all">
+                <span class="c_btn act1">&nbsp;</span>
+                <span class="c_btn">&nbsp;</span>
+                <span class="c_btn">&nbsp;</span>
+                <span class="c_btn">&nbsp;</span>
+                <span class="c_btn">&nbsp;</span>
+                <span class="c_btn">&nbsp;</span>
+            </div>
+        </section>
+        
+        <section class="free">
+            <h2>FREE</h2>
+            <a href="#" title="피부상담"><img src="./images/counselor.jpg" alt="피부상담" class="free1"></a>
+            <img src="./images/counselor_m.jpg" alt="피부상담" class="free2">
+        </section>
+
+        <section class="event">
+            <h2>EVENT</h2>
+            <div class="event_all">
+                <ul class="event_product">
+                    <li><a href="#" title="이벤트1"><img src="./images/event_01.png" alt="이벤트1"></a></li>
+                    <li><a href="#" title="이벤트2"><img src="./images/event_02.png" alt="이벤트2"></a></li>
+                    <li><a href="#" title="이벤트3"><img src="./images/event_03.png" alt="이벤트3"></a></li>
+                </ul>
+                <div>
+                    <span class="c_btn1 act1">&nbsp;</span>
+                    <span class="c_btn1">&nbsp;</span>
+                    <span class="c_btn1">&nbsp;</span>
+                </div>
+            </div>
+        </section>
+
+        <a href="#" title="위로 바로가기" id="top">Top</a>
+
+    </main>
+
+    <!-- 푸터영역 -->
+    <footer>
+        <a href="index.html" title="메인페이지로 이동" id="b_logo"><img src="./images/logo.png" alt="하단로고"></a>
+        <div class="f_txt">
+                    <a href="#" title="이용약관"><span class="f_bold">이용약관</span></a> &#x007C; 
+                    <a href="#" title="개인정보처리방침"><span class="f_bold">개인정보처리방침</span></a>
+                    <p><span class="f_bold">회사명</span> (주)000 &#x007C; <span class="f_bold">대표자</span> 김00 &#x007C; <span class="f_bold">주소</span> 서울특별시 서초구 서초대로 000-000<br>
+                    <span class="f_bold">사업자등록번호</span> 123-45-67890 &#x007C; <span class="f_bold">통신판매업신고</span> 2024-서울서초-0000 &#x007C; <span class="f_bold">개인정보책임자</span> 손00  &#x007C; <span class="f_bold">호스팅제공자</span>(주)00000 <span class="f_bold">[사업자 정보 조회]</span></p>
+            <p><span class="f_bold">Customer Center :</span> 010-123-4567</p>
+            <p><span class="f_bold">홍보 및 제휴문의 :</span> abcde@fg.co.kr</p>
+            <p><span class="f_bold">해외수출 및 기타문의 :</span> abcde@fg.co.kr</p>
+            
+        </div>
+        <div class="sns">
+        <a href="https://www.instagram.com/numbuzin_official/" title="instagram" id="insta"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.youtube.com/hashtag/%EB%84%98%EB%B2%84%EC%A6%88%EC%9D%B8" title="youtube" id="youtube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://pf.kakao.com/_IsSBj" title="kakao" id="kakao"><img src="./images/kakao_c_logo.jpg" alt="카카오톡 채널 로고"></a>
+        </div>
+    </footer>
+
+    <!-- 제이쿼리 스크립트 -->
+    <script src="./script/main.js" defer></script>
+    <script src="./script/swiper.js" defer></script>
+
+    
+</body>
+</html>
