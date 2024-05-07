@@ -22,6 +22,7 @@ header { width: 100%; height: 170px; position: absolute; z-index: 1000; backgrou
 
 .h_top > .lnb > ul { flex-wrap: nowrap; } 
 .h_top > .lnb > ul >li { background:none; } 
+
 /* 검색모달창 */
 .search_modal { background-color: rgba(0,0,0,.7); position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 9999; display: flex; justify-content: center; align-items: center; transition: 0.35s; top:-1050px} 
 .search_modal.active { top: 0px; } 
@@ -46,9 +47,10 @@ header { width: 100%; height: 170px; position: absolute; z-index: 1000; backgrou
 
 .gnb1 { position: static; width: 100%; height: 60px; left: 0px; top: 0px; background: rgba(255,255,255,.8); border-top: 2px solid #ccc;}
 .gnb2{display:none;} 
-.gnb1 a { text-decoration: none; color: #000; } 
+.gnb1 a { text-decoration: none; color: #000;} 
 .gnb1 > ul { transform: translateY(10px); padding: 0px 20px; line-height: 32px; display: flex; justify-content: center;} 
-.gnb1 > ul > li { padding: 0px 50px; border:none; position:relative;}
+.gnb1 > ul > li { padding: 0px 10px; border:none; position:relative; width: 125px;}
+.gnb1 > ul > li > a{width: 100%;}
 .gnb1 > ul > li:first-child::after, .gnb > ul > li:last-child::after {display: block;content: "";width: 500px;height: 400px;position: absolute;background:rgba(255,255,255,.8);}
 .gnb1 > ul > li:first-child::after { left: -400px; } 
 .gnb1 > ul > li:last-child::after { left: 5px; } 
@@ -57,7 +59,7 @@ header { width: 100%; height: 170px; position: absolute; z-index: 1000; backgrou
 
 .h_bottom:hover { .sub { display: block; }} 
 
-.sub { display:block; position:absolute; left:0px; top:50px; width:100%; height:400px; padding:10px 20px; z-index: 9000; background: rgba(255,255,255,.8); } 
+.sub { display:block; position:absolute; left:0px; top:50px; width:100%; height:400px; padding:10px 0px; z-index: 9000; background: rgba(255,255,255,.8); } 
 
 .sub a { padding: 0px 7%; line-height:180%; font-size: 0.95rem; } 
 

@@ -35,7 +35,7 @@
  .gnb2 > ul { width: 80%; height: 100%; float: left; padding: 70px 1.2%; background-color: #fff; } 
  .gnb2 > ul > li { border-bottom: 2px solid #fff; text-indent: 20px; line-height: 30px; clear: right; } 
  .gnb2 > ul > li > a { color:#fff; line-height:280%; display:block; width: 100%; background-color: #FAA200; } 
- .gnb2 > ul > li a:hover { color: #fff; font-weight: bold; } 
+ .gnb2 > ul > li > a:hover { color: #fff; font-weight: bold; } 
 
  .gnb2 > ul > li > a > i.fa-angle-down { font-size:1.1rem; position: absolute; right: 20%; padding-top: 1.5%; } 
  .act { transform: rotate(180deg) translate(-20px, -10px) !important; } 
